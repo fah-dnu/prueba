@@ -1,0 +1,223 @@
+<?xml version="1.0"?>  
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+
+ <RECORD>  
+<FIELD ID="1" xsi:type="CharFixed" LENGTH="2" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="2" xsi:type="CharFixed" LENGTH="16" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="3" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="4" xsi:type="CharFixed" LENGTH="23" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="5" xsi:type="CharFixed" LENGTH="8" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="6" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="7" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="8" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="9" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="10" xsi:type="CharFixed" LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="11" xsi:type="CharFixed" LENGTH="13" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="12" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="13" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="14" xsi:type="CharFixed" LENGTH="5" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="15" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="16" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="17" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="18" xsi:type="CharFixed" LENGTH="6" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="19" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="20" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="21" xsi:type="CharFixed" LENGTH="6" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="22" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="23" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="24" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="25" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="26" xsi:type="CharFixed" LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="27" xsi:type="CharFixed" LENGTH="15" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="28" xsi:type="CharFixed" LENGTH="16" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="29" xsi:type="CharFixed" LENGTH="6" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="30" xsi:type="CharFixed" LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="31" xsi:type="CharFixed" LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="32" xsi:type="CharFixed" LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="33" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="34" xsi:type="CharFixed" LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="35" xsi:type="CharFixed" LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="36" xsi:type="CharFixed" LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="37" xsi:type="CharFixed" LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="38" xsi:type="CharFixed" LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="39" xsi:type="CharFixed" LENGTH="29" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="40" xsi:type="CharFixed" LENGTH="7" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="41" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="42" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="43" xsi:type="CharFixed" LENGTH="8" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="44" xsi:type="CharFixed" LENGTH="100" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="45" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="46" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="47" xsi:type="CharFixed" LENGTH="2" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="48" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="49" xsi:type="CharFixed" LENGTH="6" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="50" xsi:type="CharFixed" LENGTH="60" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="51" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="52" xsi:type="CharFixed" LENGTH="350" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="53" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="54" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="55" xsi:type="CharFixed" LENGTH="120" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="56" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="57" xsi:type="CharFixed" LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="58" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="59" xsi:type="CharFixed" LENGTH="8" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="60" xsi:type="CharFixed" LENGTH="20" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="61" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="62" xsi:type="CharFixed" LENGTH="21" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="63" xsi:type="CharFixed" LENGTH="17" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="64" xsi:type="CharFixed" LENGTH="15" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="65" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="66" xsi:type="CharFixed" LENGTH="8" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="67" xsi:type="CharFixed" LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="68" xsi:type="CharFixed" LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="69" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="70" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="71" xsi:type="CharFixed" LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="72" xsi:type="CharFixed" LENGTH="26" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="73" xsi:type="CharFixed" LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="74" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="75" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="76" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="77" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="78" xsi:type="CharFixed" LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="79" xsi:type="CharFixed" LENGTH="11" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="80" xsi:type="CharFixed" LENGTH="140" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="81" xsi:type="CharFixed" LENGTH="144" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="82" xsi:type="CharFixed" LENGTH="57" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="83" xsi:type="CharFixed" LENGTH="125" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="84" xsi:type="CharFixed" LENGTH="1" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="85" xsi:type="CharFixed" LENGTH="19" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="86" xsi:type="CharFixed" LENGTH="12" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="87" xsi:type="CharFixed" LENGTH="14" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="88" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="89" xsi:type="CharFixed" LENGTH="144" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="90" xsi:type="CharFixed" LENGTH="16" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="91" xsi:type="CharFixed" LENGTH="125" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="92" xsi:type="CharFixed" LENGTH="10" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="93" xsi:type="CharFixed" LENGTH="4" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="94" xsi:type="CharFixed" LENGTH="36" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="95" xsi:type="CharFixed" LENGTH="3" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="96" xsi:type="CharFixed" LENGTH="82" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="97" xsi:type="CharFixed" LENGTH="8" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="98" xsi:type="CharFixed" LENGTH="104" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="99" xsi:type="CharFixed" LENGTH="6" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="100" xsi:type="CharFixed" LENGTH="6" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="101" xsi:type="CharFixed" LENGTH="19" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="102" xsi:type="CharFixed" LENGTH="15" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="103" xsi:type="CharFixed" LENGTH="169" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="104" xsi:type="CharFixed" LENGTH="68" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="105" xsi:type="CharFixed" LENGTH="19" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="106" xsi:type="CharFixed" LENGTH="144" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+<FIELD ID="107" xsi:type="CharTerm"  LENGTH="1" TERMINATOR="\n" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>  
+ </RECORD>  
+ 
+ <ROW>  
+<COLUMN SOURCE="1" NAME="Col1" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="2" NAME="Col2" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="3" NAME="Col3" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="4" NAME="Col4" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="5" NAME="Col5" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="6" NAME="Col6" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="7" NAME="Col7" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="8" NAME="Col8" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="9" NAME="Col9" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="10" NAME="Col10" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="11" NAME="Col11" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="12" NAME="Col12" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="13" NAME="Col13" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="14" NAME="Col14" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="15" NAME="Col15" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="16" NAME="Col16" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="17" NAME="Col17" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="18" NAME="Col18" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="19" NAME="Col19" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="20" NAME="Col20" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="21" NAME="Col21" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="22" NAME="Col22" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="23" NAME="Col23" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="24" NAME="Col24" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="25" NAME="Col25" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="26" NAME="Col26" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="27" NAME="Col27" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="28" NAME="Col28" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="29" NAME="Col29" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="30" NAME="Col30" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="31" NAME="Col31" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="32" NAME="Col32" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="33" NAME="Col33" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="34" NAME="Col34" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="35" NAME="Col35" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="36" NAME="Col36" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="37" NAME="Col37" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="38" NAME="Col38" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="39" NAME="Col39" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="40" NAME="Col40" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="41" NAME="Col41" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="42" NAME="Col42" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="43" NAME="Col43" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="44" NAME="Col44" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="45" NAME="Col45" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="46" NAME="Col46" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="47" NAME="Col47" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="48" NAME="Col48" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="49" NAME="Col49" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="50" NAME="Col50" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="51" NAME="Col51" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="52" NAME="Col52" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="53" NAME="Col53" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="54" NAME="Col54" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="55" NAME="Col55" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="56" NAME="Col56" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="57" NAME="Col57" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="58" NAME="Col58" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="59" NAME="Col59" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="60" NAME="Col60" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="61" NAME="Col61" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="62" NAME="Col62" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="63" NAME="Col63" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="64" NAME="Col64" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="65" NAME="Col65" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="66" NAME="Col66" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="67" NAME="Col67" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="68" NAME="Col68" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="69" NAME="Col69" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="70" NAME="Col70" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="71" NAME="Col71" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="72" NAME="Col72" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="73" NAME="Col73" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="74" NAME="Col74" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="75" NAME="Col75" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="76" NAME="Col76" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="77" NAME="Col77" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="78" NAME="Col78" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="79" NAME="Col79" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="80" NAME="Col80" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="81" NAME="Col81" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="82" NAME="Col82" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="83" NAME="Col83" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="84" NAME="Col84" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="85" NAME="Col85" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="86" NAME="Col86" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="87" NAME="Col87" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="88" NAME="Col88" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="89" NAME="Col89" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="90" NAME="Col90" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="91" NAME="Col91" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="92" NAME="Col92" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="93" NAME="Col93" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="94" NAME="Col94" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="95" NAME="Col95" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="96" NAME="Col96" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="97" NAME="Col97" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="98" NAME="Col98" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="99" NAME="Col99" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="100" NAME="Col100" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="101" NAME="Col101" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="102" NAME="Col102" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="103" NAME="Col103" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="104" NAME="Col104" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="105" NAME="Col105" xsi:type="SQLNVARCHAR"/> 
+<COLUMN SOURCE="106" NAME="Col106" xsi:type="SQLNVARCHAR"/> 
+ 
+ </ROW>  
+</BCPFORMAT>  

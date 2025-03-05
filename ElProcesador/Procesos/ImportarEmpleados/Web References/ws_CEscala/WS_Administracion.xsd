@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Admin/" targetNamespace="http://Admin/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizaPassword" type="tns:ActualizaPassword" />
+  <xs:element name="ActualizaPasswordResponse" type="tns:ActualizaPasswordResponse" />
+  <xs:element name="CrearCuentasaEmpleadoClubEscala" type="tns:CrearCuentasaEmpleadoClubEscala" />
+  <xs:element name="CrearCuentasaEmpleadoClubEscalaResponse" type="tns:CrearCuentasaEmpleadoClubEscalaResponse" />
+  <xs:element name="CrearEmpleadoClubEscala" type="tns:CrearEmpleadoClubEscala" />
+  <xs:element name="CrearEmpleadoClubEscalaResponse" type="tns:CrearEmpleadoClubEscalaResponse" />
+  <xs:element name="EnviaSMS" type="tns:EnviaSMS" />
+  <xs:element name="EnviaSMSResponse" type="tns:EnviaSMSResponse" />
+  <xs:element name="GeneraCorteOperador" type="tns:GeneraCorteOperador" />
+  <xs:element name="GeneraCorteOperadorResponse" type="tns:GeneraCorteOperadorResponse" />
+  <xs:element name="ObtieneDetallesCorteOperador" type="tns:ObtieneDetallesCorteOperador" />
+  <xs:element name="ObtieneDetallesCorteOperadorResponse" type="tns:ObtieneDetallesCorteOperadorResponse" />
+  <xs:complexType name="ObtieneDetallesCorteOperador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveEvento" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveOperador" type="xs:string" />
+      <xs:element name="TipoReporte" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtieneDetallesCorteOperadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearCuentasaEmpleadoClubEscala">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveEvento" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveTipoColectiva" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveColectivaPadre" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveColectiva" type="xs:string" />
+      <xs:element name="ID_Colectiva" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreORazonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="APaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="AMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaNacimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="Movil" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveGrupoMA" type="xs:string" />
+      <xs:element minOccurs="0" name="NIP" type="xs:string" />
+      <xs:element name="AniosParaExpirarMA" type="xs:int" />
+      <xs:element minOccurs="0" name="ClaveGrupoCuenta" type="xs:string" />
+      <xs:element name="ID_CadenaComercial" type="xs:int" />
+      <xs:element minOccurs="0" name="ClaveTipoCuenta" type="xs:string" />
+      <xs:element minOccurs="0" name="SaldoInicial" type="xs:string" />
+      <xs:element minOccurs="0" name="Baja" type="xs:string" />
+      <xs:element minOccurs="0" name="CicloNominal" type="xs:string" />
+      <xs:element minOccurs="0" name="DiaPago" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearCuentasaEmpleadoClubEscalaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizaPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveEvento" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveTipoMA" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveMedioAcceso" type="xs:string" />
+      <xs:element minOccurs="0" name="NIPNuevo" type="xs:string" />
+      <xs:element minOccurs="0" name="NIPAnterior" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizaPasswordResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EnviaSMS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveEvento" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" type="xs:string" />
+      <xs:element minOccurs="0" name="Mensaje" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EnviaSMSResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearEmpleadoClubEscala">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveEvento" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveTipoColectiva" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveColectivaPadre" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveColectiva" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreORazonSocial" type="xs:string" />
+      <xs:element minOccurs="0" name="APaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="AMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="Movil" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" type="xs:string" />
+      <xs:element name="ID_CadenaComercial" type="xs:int" />
+      <xs:element minOccurs="0" name="Baja" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearEmpleadoClubEscalaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GeneraCorteOperador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveEvento" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaveOperador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GeneraCorteOperadorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace Dnu_ProcesadorCaCao.Utilidades
+{
+   public enum TipoFilaConfig
+    { 
+        Header=1,
+        Detail=2,
+        Footer=3
+    }
+}

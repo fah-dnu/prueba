@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Admin/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WS_Administracion" targetNamespace="http://Admin/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://sitios.dnu.com.mx:8080/WS_AdminPanama/WS_Administracion?xsd=1" namespace="http://Admin/" />
+    </xsd:schema>
+  </types>
+  <message name="ActualizaPassword">
+    <part name="parameters" element="tns:ActualizaPassword" />
+  </message>
+  <message name="ActualizaPasswordResponse">
+    <part name="parameters" element="tns:ActualizaPasswordResponse" />
+  </message>
+  <message name="GeneraCorteOperador">
+    <part name="parameters" element="tns:GeneraCorteOperador" />
+  </message>
+  <message name="GeneraCorteOperadorResponse">
+    <part name="parameters" element="tns:GeneraCorteOperadorResponse" />
+  </message>
+  <message name="ObtieneDetallesCorteOperador">
+    <part name="parameters" element="tns:ObtieneDetallesCorteOperador" />
+  </message>
+  <message name="ObtieneDetallesCorteOperadorResponse">
+    <part name="parameters" element="tns:ObtieneDetallesCorteOperadorResponse" />
+  </message>
+  <message name="EnviaSMS">
+    <part name="parameters" element="tns:EnviaSMS" />
+  </message>
+  <message name="EnviaSMSResponse">
+    <part name="parameters" element="tns:EnviaSMSResponse" />
+  </message>
+  <message name="CentralMovilConsultarUltimaOperacion">
+    <part name="parameters" element="tns:CentralMovilConsultarUltimaOperacion" />
+  </message>
+  <message name="CentralMovilConsultarUltimaOperacionResponse">
+    <part name="parameters" element="tns:CentralMovilConsultarUltimaOperacionResponse" />
+  </message>
+  <message name="CrearEmpleadoClubEscala">
+    <part name="parameters" element="tns:CrearEmpleadoClubEscala" />
+  </message>
+  <message name="CrearEmpleadoClubEscalaResponse">
+    <part name="parameters" element="tns:CrearEmpleadoClubEscalaResponse" />
+  </message>
+  <message name="CentralMovilConsultarCortes">
+    <part name="parameters" element="tns:CentralMovilConsultarCortes" />
+  </message>
+  <message name="CentralMovilConsultarCortesResponse">
+    <part name="parameters" element="tns:CentralMovilConsultarCortesResponse" />
+  </message>
+  <message name="CentralMovilObtieneColectiva">
+    <part name="parameters" element="tns:CentralMovilObtieneColectiva" />
+  </message>
+  <message name="CentralMovilObtieneColectivaResponse">
+    <part name="parameters" element="tns:CentralMovilObtieneColectivaResponse" />
+  </message>
+  <message name="CentralMovilCortar">
+    <part name="parameters" element="tns:CentralMovilCortar" />
+  </message>
+  <message name="CentralMovilCortarResponse">
+    <part name="parameters" element="tns:CentralMovilCortarResponse" />
+  </message>
+  <message name="CrearUsuarioShopAndWin">
+    <part name="parameters" element="tns:CrearUsuarioShopAndWin" />
+  </message>
+  <message name="CrearUsuarioShopAndWinResponse">
+    <part name="parameters" element="tns:CrearUsuarioShopAndWinResponse" />
+  </message>
+  <message name="CrearCuentasaEmpleadoClubEscala">
+    <part name="parameters" element="tns:CrearCuentasaEmpleadoClubEscala" />
+  </message>
+  <message name="CrearCuentasaEmpleadoClubEscalaResponse">
+    <part name="parameters" element="tns:CrearCuentasaEmpleadoClubEscalaResponse" />
+  </message>
+  <message name="CentralMovilConsultarOperaciones">
+    <part name="parameters" element="tns:CentralMovilConsultarOperaciones" />
+  </message>
+  <message name="CentralMovilConsultarOperacionesResponse">
+    <part name="parameters" element="tns:CentralMovilConsultarOperacionesResponse" />
+  </message>
+  <portType name="WS_Administracion">
+    <operation name="ActualizaPassword">
+      <input wsam:Action="http://Admin/WS_Administracion/ActualizaPasswordRequest" message="tns:ActualizaPassword" />
+      <output wsam:Action="http://Admin/WS_Administracion/ActualizaPasswordResponse" message="tns:ActualizaPasswordResponse" />
+    </operation>
+    <operation name="GeneraCorteOperador">
+      <input wsam:Action="http://Admin/WS_Administracion/GeneraCorteOperadorRequest" message="tns:GeneraCorteOperador" />
+      <output wsam:Action="http://Admin/WS_Administracion/GeneraCorteOperadorResponse" message="tns:GeneraCorteOperadorResponse" />
+    </operation>
+    <operation name="ObtieneDetallesCorteOperador">
+      <input wsam:Action="http://Admin/WS_Administracion/ObtieneDetallesCorteOperadorRequest" message="tns:ObtieneDetallesCorteOperador" />
+      <output wsam:Action="http://Admin/WS_Administracion/ObtieneDetallesCorteOperadorResponse" message="tns:ObtieneDetallesCorteOperadorResponse" />
+    </operation>
+    <operation name="EnviaSMS">
+      <input wsam:Action="http://Admin/WS_Administracion/EnviaSMSRequest" message="tns:EnviaSMS" />
+      <output wsam:Action="http://Admin/WS_Administracion/EnviaSMSResponse" message="tns:EnviaSMSResponse" />
+    </operation>
+    <operation name="CentralMovilConsultarUltimaOperacion">
+      <input wsam:Action="http://Admin/WS_Administracion/CentralMovilConsultarUltimaOperacionRequest" message="tns:CentralMovilConsultarUltimaOperacion" />
+      <output wsam:Action="http://Admin/WS_Administracion/CentralMovilConsultarUltimaOperacionResponse" message="tns:CentralMovilConsultarUltimaOperacionResponse" />
+    </operation>
+    <operation name="CrearEmpleadoClubEscala">
+      <input wsam:Action="http://Admin/WS_Administracion/CrearEmpleadoClubEscalaRequest" message="tns:CrearEmpleadoClubEscala" />
+      <output wsam:Action="http://Admin/WS_Administracion/CrearEmpleadoClubEscalaResponse" message="tns:CrearEmpleadoClubEscalaResponse" />
+    </operation>
+    <operation name="CentralMovilConsultarCortes">
+      <input wsam:Action="http://Admin/WS_Administracion/CentralMovilConsultarCortesRequest" message="tns:CentralMovilConsultarCortes" />
+      <output wsam:Action="http://Admin/WS_Administracion/CentralMovilConsultarCortesResponse" message="tns:CentralMovilConsultarCortesResponse" />
+    </operation>
+    <operation name="CentralMovilObtieneColectiva">
+      <input wsam:Action="http://Admin/WS_Administracion/CentralMovilObtieneColectivaRequest" message="tns:CentralMovilObtieneColectiva" />
+      <output wsam:Action="http://Admin/WS_Administracion/CentralMovilObtieneColectivaResponse" message="tns:CentralMovilObtieneColectivaResponse" />
+    </operation>
+    <operation name="CentralMovilCortar">
+      <input wsam:Action="http://Admin/WS_Administracion/CentralMovilCortarRequest" message="tns:CentralMovilCortar" />
+      <output wsam:Action="http://Admin/WS_Administracion/CentralMovilCortarResponse" message="tns:CentralMovilCortarResponse" />
+    </operation>
+    <operation name="CrearUsuarioShopAndWin">
+      <input wsam:Action="http://Admin/WS_Administracion/CrearUsuarioShopAndWinRequest" message="tns:CrearUsuarioShopAndWin" />
+      <output wsam:Action="http://Admin/WS_Administracion/CrearUsuarioShopAndWinResponse" message="tns:CrearUsuarioShopAndWinResponse" />
+    </operation>
+    <operation name="CrearCuentasaEmpleadoClubEscala">
+      <input wsam:Action="http://Admin/WS_Administracion/CrearCuentasaEmpleadoClubEscalaRequest" message="tns:CrearCuentasaEmpleadoClubEscala" />
+      <output wsam:Action="http://Admin/WS_Administracion/CrearCuentasaEmpleadoClubEscalaResponse" message="tns:CrearCuentasaEmpleadoClubEscalaResponse" />
+    </operation>
+    <operation name="CentralMovilConsultarOperaciones">
+      <input wsam:Action="http://Admin/WS_Administracion/CentralMovilConsultarOperacionesRequest" message="tns:CentralMovilConsultarOperaciones" />
+      <output wsam:Action="http://Admin/WS_Administracion/CentralMovilConsultarOperacionesResponse" message="tns:CentralMovilConsultarOperacionesResponse" />
+    </operation>
+  </portType>
+  <binding name="WS_AdministracionPortBinding" type="tns:WS_Administracion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ActualizaPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GeneraCorteOperador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtieneDetallesCorteOperador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnviaSMS">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CentralMovilConsultarUltimaOperacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearEmpleadoClubEscala">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CentralMovilConsultarCortes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CentralMovilObtieneColectiva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CentralMovilCortar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearUsuarioShopAndWin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearCuentasaEmpleadoClubEscala">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CentralMovilConsultarOperaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_Administracion">
+    <port name="WS_AdministracionPort" binding="tns:WS_AdministracionPortBinding">
+      <soap:address location="http://sitios.dnu.com.mx:8080/WS_AdminPanama/WS_Administracion" />
+    </port>
+  </service>
+</definitions>

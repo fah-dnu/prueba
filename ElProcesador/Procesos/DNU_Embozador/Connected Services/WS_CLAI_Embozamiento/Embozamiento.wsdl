@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://embozamiento.wsbeans.iseries/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Embozamiento" targetNamespace="http://embozamiento.wsbeans.iseries/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://embozamiento.wsbeans.iseries/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="pgmact" type="tns:pgmact" />
+      <xs:element name="pgmactResponse" type="tns:pgmactResponse" />
+      <xs:complexType name="pgmact">
+        <xs:sequence>
+          <xs:element name="arg0" type="tns:pgmactInput" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pgmactInput">
+        <xs:sequence>
+          <xs:element name="CODRESPUESTA" type="xs:string" />
+          <xs:element name="CRIPTOPIN" type="xs:string" />
+          <xs:element name="CVV" type="xs:string" />
+          <xs:element name="CVV2" type="xs:string" />
+          <xs:element name="DESCRESPUESTA" type="xs:string" />
+          <xs:element name="FECEXPIRACION" type="xs:string" />
+          <xs:element name="FORPINBLOCK" type="xs:string" />
+          <xs:element name="IDSOLICITUD" type="xs:string" />
+          <xs:element name="PVV" type="xs:string" />
+          <xs:element name="TARJETA" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pgmactResponse">
+        <xs:sequence>
+          <xs:element name="return" type="tns:pgmactResult" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pgmactResult">
+        <xs:sequence>
+          <xs:element name="CODRESPUESTA" type="xs:string" />
+          <xs:element name="CRIPTOPIN" type="xs:string" />
+          <xs:element name="CVV" type="xs:string" />
+          <xs:element name="CVV2" type="xs:string" />
+          <xs:element name="DESCRESPUESTA" type="xs:string" />
+          <xs:element name="FECEXPIRACION" type="xs:string" />
+          <xs:element name="FORPINBLOCK" type="xs:string" />
+          <xs:element name="IDSOLICITUD" type="xs:string" />
+          <xs:element name="PVV" type="xs:string" />
+          <xs:element name="TARJETA" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="pgmact">
+    <part name="parameters" element="tns:pgmact" />
+  </message>
+  <message name="pgmactResponse">
+    <part name="parameters" element="tns:pgmactResponse" />
+  </message>
+  <portType name="EmbozamientoServices">
+    <operation name="pgmact">
+      <input wsam:Action="http://embozamiento.wsbeans.iseries/EmbozamientoServices/pgmactRequest" message="tns:pgmact" />
+      <output wsam:Action="http://embozamiento.wsbeans.iseries/EmbozamientoServices/pgmactResponse" message="tns:pgmactResponse" />
+    </operation>
+  </portType>
+  <binding name="EmbozamientoServicesPortBinding" type="tns:EmbozamientoServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="pgmact">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Embozamiento">
+    <port name="EmbozamientoServicesPort" binding="tns:EmbozamientoServicesPortBinding">
+      <soap:address location="http://10.15.1.51:21003/web/services/EmbozamientoService/Embozamiento" />
+    </port>
+  </service>
+</definitions>

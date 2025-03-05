@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.wscomponent.com/" targetNamespace="http://ws.wscomponent.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="BalanceRequest" type="tns:BalanceRequest" />
+  <xs:element name="BalanceRequestResponse" type="tns:BalanceRequestResponse" />
+  <xs:element name="FullBalanceRequest" type="tns:FullBalanceRequest" />
+  <xs:element name="FullBalanceRequestResponse" type="tns:FullBalanceRequestResponse" />
+  <xs:element name="MovsRequest" type="tns:MovsRequest" />
+  <xs:element name="MovsRequestResponse" type="tns:MovsRequestResponse" />
+  <xs:element name="NewAccount" type="tns:NewAccount" />
+  <xs:element name="NewAccountResponse" type="tns:NewAccountResponse" />
+  <xs:element name="Pay" type="tns:Pay" />
+  <xs:element name="PayCancellation" type="tns:PayCancellation" />
+  <xs:element name="PayCancellationResponse" type="tns:PayCancellationResponse" />
+  <xs:element name="PayResponse" type="tns:PayResponse" />
+  <xs:element name="PayValidation" type="tns:PayValidation" />
+  <xs:element name="PayValidationResponse" type="tns:PayValidationResponse" />
+  <xs:element name="PhoneRequest" type="tns:PhoneRequest" />
+  <xs:element name="PhoneRequestResponse" type="tns:PhoneRequestResponse" />
+  <xs:element name="Reward" type="tns:Reward" />
+  <xs:element name="RewardResponse" type="tns:RewardResponse" />
+  <xs:complexType name="NewAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKU_Beneficio" type="xs:string" />
+      <xs:element minOccurs="0" name="_Fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="_Hora" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Terminal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NewAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myNewAccountResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myNewAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="numCuenta" type="xs:string" />
+      <xs:element minOccurs="0" name="numTarjeta" type="xs:string" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PayValidation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_Expiracion" type="xs:string" />
+      <xs:element minOccurs="0" name="_CodigoValidacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKU_Beneficio" type="xs:string" />
+      <xs:element name="_Importe" type="xs:float" />
+      <xs:element name="_ImporteDescuento" type="xs:float" />
+      <xs:element minOccurs="0" name="_Fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="_Hora" type="xs:string" />
+      <xs:element minOccurs="0" name="_Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Operador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PayValidationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myPayValidationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myPayValidationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="importeAplicado" type="xs:float" />
+      <xs:element minOccurs="0" name="leyenda" type="xs:string" />
+      <xs:element name="otroSaldo" type="xs:float" />
+      <xs:element minOccurs="0" name="SKUs" type="xs:string" />
+      <xs:element name="saldoPesos" type="xs:float" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="unidadOtroSaldo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BalanceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_Expiracion" type="xs:string" />
+      <xs:element minOccurs="0" name="_CodigoValidacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKU_Beneficio" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Operador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BalanceRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myBalanceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myBalanceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="leyenda" type="xs:string" />
+      <xs:element name="otroSaldo" type="xs:float" />
+      <xs:element name="saldoPesos" type="xs:float" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="unidadOtroSaldo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FullBalanceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_Expiracion" type="xs:string" />
+      <xs:element minOccurs="0" name="_CodigoValidacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Operador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FullBalanceRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myFullBalanceResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myFullBalanceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="leyenda" type="xs:string" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlSaldos" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PayCancellation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sufijo" type="xs:string" />
+      <xs:element minOccurs="0" name="_Expiracion" type="xs:string" />
+      <xs:element minOccurs="0" name="_CodigoValidacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKU_Beneficio" type="xs:string" />
+      <xs:element name="_Importe" type="xs:float" />
+      <xs:element name="_ImporteDescuento" type="xs:float" />
+      <xs:element minOccurs="0" name="_Autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="_Hora" type="xs:string" />
+      <xs:element minOccurs="0" name="_Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Operador" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PayCancellationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myPayCancellationResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myPayCancellationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="leyenda" type="xs:string" />
+      <xs:element name="saldoPesos" type="xs:float" />
+      <xs:element name="saldoPuntos" type="xs:float" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="ticket" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Pay">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sufijo" type="xs:string" />
+      <xs:element minOccurs="0" name="_Token" type="xs:string" />
+      <xs:element minOccurs="0" name="_Expiracion" type="xs:string" />
+      <xs:element minOccurs="0" name="_CodigoValidacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKU_Beneficio" type="xs:string" />
+      <xs:element name="_Importe" type="xs:float" />
+      <xs:element name="_ImporteDescuento" type="xs:float" />
+      <xs:element minOccurs="0" name="_Fecha" type="xs:string" />
+      <xs:element minOccurs="0" name="_Hora" type="xs:string" />
+      <xs:element minOccurs="0" name="_Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Operador" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKUS" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myPayResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myPayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="importeAplicado" type="xs:float" />
+      <xs:element minOccurs="0" name="leyenda" type="xs:string" />
+      <xs:element name="otroSaldo" type="xs:float" />
+      <xs:element minOccurs="0" name="SKUs" type="xs:string" />
+      <xs:element name="saldoPesos" type="xs:float" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="unidadOtroSaldo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MovsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sufijo" type="xs:string" />
+      <xs:element minOccurs="0" name="_Expiracion" type="xs:string" />
+      <xs:element minOccurs="0" name="_CodigoValidacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKU_Beneficio" type="xs:string" />
+      <xs:element minOccurs="0" name="_FechaInicioPeriodo" type="xs:string" />
+      <xs:element minOccurs="0" name="_FechaFinPeriodo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MovsRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myMovsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myMovsResponse">
+    <xs:sequence>
+      <xs:element name="codigoRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="xmlOperaciones" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Reward">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKU_Beneficio" type="xs:string" />
+      <xs:element name="_Importe" type="xs:float" />
+      <xs:element minOccurs="0" name="_Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="_Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="_Terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="_Operador" type="xs:string" />
+      <xs:element minOccurs="0" name="_SKUS" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RewardResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myRewardResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myRewardResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element minOccurs="0" name="beneficios" type="xs:string" />
+      <xs:element minOccurs="0" name="codigoRespuesta" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="leyenda" type="xs:string" />
+      <xs:element minOccurs="0" name="saldos" type="xs:string" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PhoneRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="_Password" type="xs:string" />
+      <xs:element minOccurs="0" name="_TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="_MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="GeneraCodigo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PhoneRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:myPhoneResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="myPhoneResponse">
+    <xs:sequence>
+      <xs:element name="codigoRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" name="codigoValidacion" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

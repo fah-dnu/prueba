@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetEdoCuentaDebitoTrafSubReporte1" targetNamespace="http://tempuri.org/DataSetEdoCuentaDebito.xsd" xmlns:mstns="http://tempuri.org/DataSetEdoCuentaDebito.xsd" xmlns="http://tempuri.org/DataSetEdoCuentaDebito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetEdoCuentaDebitoTrafSubReporte1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetEdoCuentaDebitoTrafSubReporte1" msprop:Generator_UserDSName="DataSetEdoCuentaDebitoTrafSubReporte1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableCargosObjetados" msprop:Generator_TableClassName="DataTableCargosObjetadosDataTable" msprop:Generator_TableVarName="tableDataTableCargosObjetados" msprop:Generator_RowChangedName="DataTableCargosObjetadosRowChanged" msprop:Generator_TablePropName="DataTableCargosObjetados" msprop:Generator_RowDeletingName="DataTableCargosObjetadosRowDeleting" msprop:Generator_RowChangingName="DataTableCargosObjetadosRowChanging" msprop:Generator_RowEvHandlerName="DataTableCargosObjetadosRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableCargosObjetadosRowDeleted" msprop:Generator_RowClassName="DataTableCargosObjetadosRow" msprop:Generator_UserTableName="DataTableCargosObjetados" msprop:Generator_RowEvArgName="DataTableCargosObjetadosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FechaOriginal" msprop:Generator_ColumnVarNameInTable="columnFechaOriginal" msprop:Generator_ColumnPropNameInRow="FechaOriginal" msprop:Generator_ColumnPropNameInTable="FechaOriginalColumn" msprop:Generator_UserColumnName="FechaOriginal" type="xs:string" minOccurs="0" />
+              <xs:element name="DescripcionTransaccion" msprop:Generator_ColumnVarNameInTable="columnDescripcionTransaccion" msprop:Generator_ColumnPropNameInRow="DescripcionTransaccion" msprop:Generator_ColumnPropNameInTable="DescripcionTransaccionColumn" msprop:Generator_UserColumnName="DescripcionTransaccion" type="xs:string" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:string" minOccurs="0" />
+              <xs:element name="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" msprop:Generator_UserColumnName="Folio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

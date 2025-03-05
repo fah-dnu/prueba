@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1DF84C9-4536-4449-B81C-DF6AD628AFAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DNU_ProcesadorT112</RootNamespace>
+    <AssemblyName>DNU_ProcesadorT112</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>snkFile510.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Executer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cbbe65492bb50e92, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DNU_LibreriasCompartidas\DLLsExecuterProduccion\Executer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interfases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=394d7691aaac1758, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DNU_LibreriasCompartidas\DLLsExecuterProduccion\Interfases.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\CentralAdministrativa\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\Core\Procesador\bin\Debug\DNU_ProcesadorT112\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\Dependencias\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\..\..\CentralAdministrativa\Resources\Dll\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\..\Dependencias\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DNU_LibreriasCompartidas\DLLsExecuterProduccion\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDatos\BDAutorizador.cs" />
+    <Compile Include="BaseDatos\DAOArchivo.cs" />
+    <Compile Include="BaseDatos\DAOComparador.cs" />
+    <Compile Include="BaseDatos\DAODatosBase.cs" />
+    <Compile Include="BaseDatos\DAOFichero.cs" />
+    <Compile Include="BaseDatos\DAOPertenencia.cs" />
+    <Compile Include="BaseDatos\DAOWebhook.cs" />
+    <Compile Include="BaseDatos\DBProcesadorArchivo.cs" />
+    <Compile Include="Entidades\Archivo.cs" />
+    <Compile Include="Entidades\Campo.cs" />
+    <Compile Include="Entidades\CampoConfig.cs" />
+    <Compile Include="Entidades\ComparadorConfig.cs" />
+    <Compile Include="Entidades\ConfigRespuesta.cs" />
+    <Compile Include="Entidades\Datos.cs" />
+    <Compile Include="Entidades\DatosBaseDatos.cs" />
+    <Compile Include="Entidades\DTOArchivo.cs" />
+    <Compile Include="Entidades\DTOConfiguracionArchivo.cs" />
+    <Compile Include="Entidades\Fila.cs" />
+    <Compile Include="Entidades\FilaConfig.cs" />
+    <Compile Include="Entidades\Movimiento.cs" />
+    <Compile Include="Entidades\RespuestaProceso.cs" />
+    <Compile Include="Entidades\RespuestaWebhook.cs" />
+    <Compile Include="Entidades\WebhookMessage.cs" />
+    <Compile Include="LogicaNegocio\FileFormat.cs" />
+    <Compile Include="LogicaNegocio\LNArchivo.cs" />
+    <Compile Include="LogicaNegocio\LNComparacion.cs" />
+    <Compile Include="LogicaNegocio\LNEvento.cs" />
+    <Compile Include="LogicaNegocio\LNEventos.cs" />
+    <Compile Include="LogicaNegocio\LNFTP.cs" />
+    <Compile Include="LogicaNegocio\LNMailing.cs" />
+    <Compile Include="LogicaNegocio\LNProcesaMovimiento.cs" />
+    <Compile Include="LogicaNegocio\LNWebhook.cs" />
+    <Compile Include="ProcesarT112.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades\Emailing.cs" />
+    <Compile Include="Utilidades\TipoFilaConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DNU_files.snk" />
+    <None Include="packages.config" />
+    <None Include="snkFile510.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EmailRespuestaConciliacion.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonProcesador\CommonProcesador\CommonProcesador.csproj">
+      <Project>{92e26935-9079-4245-9653-fdd0d92c5c3d}</Project>
+      <Name>CommonProcesador</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

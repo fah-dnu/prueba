@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3E7B1490-05C4-41FA-8E04-74740E9F53D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DNU_ParabiliaProcesoCortes</RootNamespace>
+    <AssemblyName>DNU_ParabiliaProcesoCortes</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Cortes.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonProcesador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9bb8ec256b6b2c12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\CommonProcesador.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="DALAutorizador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=71ea720b4bb9a277, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\DALAutorizador.dll</HintPath>
+    </Reference>
+    <Reference Include="Dnu.AutorizadorParabiliaAzure ">
+      <HintPath>..\..\DNU_ParabiliaAltaTarjetasAnonimas\DLLs\azure\Dnu.AutorizadorParabiliaAzure .dll</HintPath>
+    </Reference>
+    <Reference Include="DNU_Multipacs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=314ca1389e8602c8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DNU_Multipacs\bin\Debug\DNU_Multipacs.dll</HintPath>
+    </Reference>
+    <Reference Include="DNU_ParabiliaProcesoCortes.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5044d981c01efea9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DNU_Multipacs\bin\Debug\DNU_ParabiliaProcesoCortes.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Executer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cbbe65492bb50e92, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\Executer.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, PublicKeyToken=1c3323047b300a52, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="Interfases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=19fbb44e554115c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\Interfases.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Azure.KeyVault">
+      <HintPath>..\..\DNU_ParabiliaAltaTarjetasAnonimas\DLLs\azure\Microsoft.Azure.KeyVault.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.WebKey">
+      <HintPath>..\..\DNU_ParabiliaAltaTarjetasAnonimas\DLLs\azure\Microsoft.Azure.KeyVault.WebKey.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <HintPath>..\..\DNU_ParabiliaAltaTarjetasAnonimas\DLLs\azure\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\Microsoft.JScript.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime">
+      <HintPath>..\..\DNU_ParabiliaAltaTarjetasAnonimas\DLLs\azure\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure">
+      <HintPath>..\..\DNU_ParabiliaAltaTarjetasAnonimas\DLLs\azure\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider">
+      <HintPath>..\..\DNU_ParabiliaAltaTarjetasAnonimas\DLLs\azure\Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vsa, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\Microsoft.Vsa.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>referenciasDll\System.Xml.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapaDatos\BaseDeDatos.cs" />
+    <Compile Include="CapaDatos\DAOCortes.cs" />
+    <Compile Include="CapaDatos\DAOEvento.cs" />
+    <Compile Include="CapaDatos\DAOEventoExecute.cs" />
+    <Compile Include="CapaDatos\DAOFacturas.cs" />
+    <Compile Include="CapaDatos\DAORegla.cs" />
+    <Compile Include="CapaDatos\DAOUtilerias.cs" />
+    <Compile Include="Entidades\Bonificacion.cs" />
+    <Compile Include="Entidades\Colectiva.cs" />
+    <Compile Include="Entidades\Concepto.cs" />
+    <Compile Include="Entidades\DetalleFactura.cs" />
+    <Compile Include="Entidades\DetalleFacturaTipo.cs" />
+    <Compile Include="Entidades\Direccion.cs" />
+    <Compile Include="Entidades\EventoExecute.cs" />
+    <Compile Include="Entidades\Factura.cs" />
+    <Compile Include="Entidades\Facturas.cs" />
+    <Compile Include="Entidades\DatosOperacionesExecute.cs" />
+    <Compile Include="Entidades\FacturaTipo.cs" />
+    <Compile Include="Entidades\pagosIvasYComisiones.cs" />
+    <Compile Include="Entidades\ParametroFacturaTipo.cs" />
+    <Compile Include="Entidades\Response.cs" />
+    <Compile Include="Entidades\RespuestaSolicitud.cs" />
+    <Compile Include="Entidades\Timbre.cs" />
+    <Compile Include="Entidades\Xml.cs" />
+    <Compile Include="LogicaNegocio\CFDI.cs" />
+    <Compile Include="Entidades\Correo.cs" />
+    <Compile Include="LogicaNegocio\EventoManual.cs" />
+    <Compile Include="LogicaNegocio\GeneraPoliza.cs" />
+    <Compile Include="LogicaNegocio\LNBonificacion.cs" />
+    <Compile Include="LogicaNegocio\LNFacturas.cs" />
+    <Compile Include="LogicaNegocio\LNOperaciones.cs" />
+    <Compile Include="LogicaNegocio\LNEnvioCorreo.cs" />
+    <Compile Include="LogicaNegocio\LNInicioCorte.cs" />
+    <Compile Include="LogicaNegocio\LNOperacionesCorte.cs" />
+    <Compile Include="LogicaNegocio\LNOperacionesEdoCuenta.cs" />
+    <Compile Include="LogicaNegocio\LNPoliza.cs" />
+    <Compile Include="LogicaNegocio\LNValidacionesCampos.cs" />
+    <Compile Include="LogicaNegocio\opensslkey.cs" />
+    <Compile Include="LogicaNegocio\requerimiento_adataServices.cs" />
+    <Compile Include="dataService\acceso_aDatos.cs" />
+    <Compile Include="dataService\servicioDatos.cs" />
+    <Compile Include="Entidades\Cuentas.cs" />
+    <Compile Include="Entidades\DAOPoliza.cs" />
+    <Compile Include="Entidades\EjecutorCadena.cs" />
+    <Compile Include="Entidades\Evento.cs" />
+    <Compile Include="Entidades\Regla.cs" />
+    <Compile Include="Entidades\Respuesta.cs" />
+    <Compile Include="ProcesoCortes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteDebito\clip\EdoCuentaTipDebito.cs">
+      <DependentUpon>EdoCuentaTipDebito.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReporteDebito\clip\EdoCuentaTipDebitoRespaldo.cs">
+      <DependentUpon>EdoCuentaTipDebitoRespaldo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReporteDebito\crystal\EdoCuentaTipDebito.cs">
+      <DependentUpon>EdoCuentaTipDebito.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReporteDebito\DataSetEdoCuentaDebito.cs">
+      <DependentUpon>DataSetEdoCuentaDebito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteDebito\DataSetEdoCuentaDebito.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEdoCuentaDebito.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteDebito\EdoCuentaTipDebito.cs">
+      <DependentUpon>EdoCuentaTipDebito.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReporteDebito\respaldo\EdoCuentaTipDebito.cs">
+      <DependentUpon>EdoCuentaTipDebito.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\EdoCuenta.cs">
+      <DependentUpon>EdoCuenta.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReporteTipado\DataSetOperacionesEdoCuenta.cs">
+      <DependentUpon>DataSetOperacionesEdoCuenta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTipado\DataSetOperacionesEdoCuenta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetOperacionesEdoCuenta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteTipado\EdoCuentaTip.cs">
+      <DependentUpon>EdoCuentaTip.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReporteTipado\EdoCuentaTipSinTimbre.cs">
+      <DependentUpon>EdoCuentaTipSinTimbre.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Utilidades\LogueProcesaEdoCuenta.cs" />
+    <Compile Include="Web References\com.mysuitetest.www\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsFacturacionMySuit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="referenciasDll\CommonProcesador.dll" />
+    <Content Include="referenciasDll\CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="referenciasDll\CrystalDecisions.ReportSource.dll" />
+    <Content Include="referenciasDll\CrystalDecisions.Shared.dll" />
+    <Content Include="referenciasDll\DALAutorizador.dll" />
+    <Content Include="referenciasDll\DALCajero.dll" />
+    <Content Include="referenciasDll\DALCentralAplicaciones.dll" />
+    <Content Include="referenciasDll\DNU_Multipacs.dll" />
+    <Content Include="referenciasDll\DNU_ParabiliaProcesoCortes.Common.dll" />
+    <Content Include="referenciasDll\EncriptacionAES.dll" />
+    <Content Include="referenciasDll\Executer.dll" />
+    <Content Include="referenciasDll\Framework.dll" />
+    <Content Include="referenciasDll\Gma.QrCodeNet.Encoding.dll" />
+    <Content Include="referenciasDll\Interfases.dll" />
+    <Content Include="referenciasDll\log4net.dll" />
+    <Content Include="referenciasDll\Mensajeria.dll" />
+    <Content Include="referenciasDll\Microsoft.JScript.dll" />
+    <Content Include="referenciasDll\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="referenciasDll\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="referenciasDll\Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="referenciasDll\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="referenciasDll\Microsoft.Practices.ServiceLocation.dll" />
+    <Content Include="referenciasDll\Microsoft.Practices.Unity.dll" />
+    <Content Include="referenciasDll\Microsoft.Practices.Unity.Interception.dll" />
+    <Content Include="referenciasDll\Microsoft.Vsa.dll" />
+    <Content Include="referenciasDll\System.Xml.dll" />
+    <Content Include="referenciasDll\System.Xml.Linq.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cortes.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReporteDebito\DataSetEdoCuentaDebito.xsc">
+      <DependentUpon>DataSetEdoCuentaDebito.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteDebito\DataSetEdoCuentaDebito.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEdoCuentaDebito.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReporteDebito\DataSetEdoCuentaDebito.xss">
+      <DependentUpon>DataSetEdoCuentaDebito.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteTipado\DataSetOperacionesEdoCuenta.xsc">
+      <DependentUpon>DataSetOperacionesEdoCuenta.xsd</DependentUpon>
+    </None>
+    <None Include="ReporteTipado\DataSetOperacionesEdoCuenta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetOperacionesEdoCuenta.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReporteTipado\DataSetOperacionesEdoCuenta.xss">
+      <DependentUpon>DataSetOperacionesEdoCuenta.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\com.mysuitetest.www\FactWSFront.wsdl" />
+    <None Include="Web References\com.mysuitetest.www\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\com.mysuitetest.www\TransactionTag.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsFacturacionMySuit\FactWSFront.wsdl" />
+    <None Include="Web References\wsFacturacionMySuit\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsFacturacionMySuit\TransactionTag.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://www.mysuitecfdi.com/mx.com.fact.wsfront/FactWSFront.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsFacturacionMySuit\</RelPath>
+      <UpdateFromURL>https://www.mysuitecfdi.com/mx.com.fact.wsfront/FactWSFront.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DNU_ParabiliaProcesoCortes_wsFacturacionMySuit_FactWSFront</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.mysuitetest.com/mx.com.fact.wsfront/FactWSFront.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.mysuitetest.www\</RelPath>
+      <UpdateFromURL>https://www.mysuitetest.com/mx.com.fact.wsfront/FactWSFront.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DNU_ParabiliaProcesoCortes_com_mysuitetest_www_FactWSFront</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Certificados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ReporteDebito\clip\EdoCuentaTipDebito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuentaTipDebito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDebito\clip\EdoCuentaTipDebitoRespaldo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuentaTipDebitoRespaldo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDebito\crystal\EdoCuentaTipDebito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuentaTipDebito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDebito\EdoCuentaTipDebito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuentaTipDebito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDebito\respaldo\EdoCuentaTipDebito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuentaTipDebito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\EdoCuenta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuenta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteTipado\EdoCuentaTip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuentaTip.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteTipado\EdoCuentaTipSinTimbre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EdoCuentaTipSinTimbre.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

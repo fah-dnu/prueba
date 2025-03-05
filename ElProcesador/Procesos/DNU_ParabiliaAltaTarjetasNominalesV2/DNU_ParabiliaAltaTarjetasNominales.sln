@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliaAltaTarjetasNominales", "DNU_ParabiliaAltaTarjetasNominales.csproj", "{A95379DF-41BB-4C30-BBFE-0F1435B75FDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{002E1A04-80FE-4E3B-A704-498F1BEA28E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A95379DF-41BB-4C30-BBFE-0F1435B75FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95379DF-41BB-4C30-BBFE-0F1435B75FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95379DF-41BB-4C30-BBFE-0F1435B75FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95379DF-41BB-4C30-BBFE-0F1435B75FDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002E1A04-80FE-4E3B-A704-498F1BEA28E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002E1A04-80FE-4E3B-A704-498F1BEA28E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002E1A04-80FE-4E3B-A704-498F1BEA28E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002E1A04-80FE-4E3B-A704-498F1BEA28E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B12DB2E4-3414-4EC4-9784-21DAC7BE8695}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://64.34.163.109:9090/tfs/dnu_procesos
+		SccProjectUniqueName0 = DNU_ParabiliaAltaTarjetasNominales.csproj
+		SccLocalPath0 = .
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = ConsoleApp1\\ConsoleApp1.csproj
+		SccProjectName2 = ConsoleApp1
+		SccLocalPath2 = ConsoleApp1
+	EndGlobalSection
+EndGlobal

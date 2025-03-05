@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DNU_ParabiliaProcesoCortes.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DNU_ParabiliaProcesoCortes_com_mysuitetest_www_FactWSFront" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.mysuitetest.com/mx.com.fact.wsfront/FactWSFront.asmx</Value>
+    </Setting>
+    <Setting Name="DNU_ParabiliaProcesoCortes_wsFacturacionMySuit_FactWSFront" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.mysuitecfdi.com/mx.com.fact.wsfront/FactWSFront.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

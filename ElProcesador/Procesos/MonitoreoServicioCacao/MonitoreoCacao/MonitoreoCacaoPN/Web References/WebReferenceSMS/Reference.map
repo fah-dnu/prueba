@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://209.222.19.75/wsMensajeroSMS/ServicioMensajes.svc?xsd=xsd0" filename="ServicioMensajes.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://209.222.19.75/wsMensajeroSMS/ServicioMensajes.svc?xsd=xsd1" filename="ServicioMensajes0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://209.222.19.75/wsMensajeroSMS/ServicioMensajes.svc?wsdl" filename="ServicioMensajes.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://209.222.19.75/wsMensajeroSMS/ServicioMensajes.svc?xsd=xsd2" filename="ServicioMensajes1.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://sitios.dnu.com.mx:8080/WS_AdminPanama/WS_Administracion?wsdl" filename="WS_Administracion.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://sitios.dnu.com.mx:8080/WS_AdminPanama/WS_Administracion?xsd=1" filename="WS_Administracion.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

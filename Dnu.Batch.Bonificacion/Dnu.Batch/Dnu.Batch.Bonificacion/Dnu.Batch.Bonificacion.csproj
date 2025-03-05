@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E229C4DA-9416-410C-BE58-4E4721F76E8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dnu.Batch.Bonificacion</RootNamespace>
+    <AssemblyName>Dnu.Batch.Bonificacion</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Dnu.Batch.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BonificacionProcess.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServicePaymentProcess\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ElProcesador\CommonProcesador\CommonProcesador\CommonProcesador.csproj">
+      <Project>{92e26935-9079-4245-9653-fdd0d92c5c3d}</Project>
+      <Name>CommonProcesador</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dnu.Batch.DataBase\Dnu.Batch.DataBase.csproj">
+      <Project>{583a2532-6dae-4e2f-9636-fc2f9f50678f}</Project>
+      <Name>Dnu.Batch.DataBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dnu.Batch.DataContracts\Dnu.Batch.DataContracts.csproj">
+      <Project>{70f848c6-6089-4adb-a844-045de05756de}</Project>
+      <Name>Dnu.Batch.DataContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dnu.Batch.Utilities\Dnu.Batch.Utilities.csproj">
+      <Project>{4e6764ab-0e0b-4920-b386-4543fb3bde52}</Project>
+      <Name>Dnu.Batch.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Dnu.Batch.snk" />
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myFullBalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myMovsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myNewAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myPayCancellationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myPayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myPayValidationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myPhoneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myPOSPayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServicePaymentProcess\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePaymentProcess\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePaymentProcess\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicePaymentProcess\Dnu.Batch.Bonificacion.ServicePaymentProcess.myRewardResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\PaymentProcess1.wsdl" />
+    <None Include="Service References\ServicePaymentProcess\PaymentProcess1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicePaymentProcess\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

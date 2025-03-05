@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.wscomponent.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="TransactionProcess" targetNamespace="http://ws.wscomponent.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://64.34.163.109:8080/WsTransaction/TransactionProcess?xsd=1" namespace="http://ws.wscomponent.com/" />
+    </xsd:schema>
+  </types>
+  <message name="SendTransaction">
+    <part name="parameters" element="tns:SendTransaction" />
+  </message>
+  <message name="SendTransactionResponse">
+    <part name="parameters" element="tns:SendTransactionResponse" />
+  </message>
+  <message name="Sell">
+    <part name="parameters" element="tns:Sell" />
+  </message>
+  <message name="SellResponse">
+    <part name="parameters" element="tns:SellResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="Sell2">
+    <part name="parameters" element="tns:Sell2" />
+  </message>
+  <message name="Sell2Response">
+    <part name="parameters" element="tns:Sell2Response" />
+  </message>
+  <portType name="TransactionProcess">
+    <operation name="SendTransaction">
+      <input wsam:Action="http://ws.wscomponent.com/TransactionProcess/SendTransactionRequest" message="tns:SendTransaction" />
+      <output wsam:Action="http://ws.wscomponent.com/TransactionProcess/SendTransactionResponse" message="tns:SendTransactionResponse" />
+    </operation>
+    <operation name="Sell">
+      <input wsam:Action="http://ws.wscomponent.com/TransactionProcess/SellRequest" message="tns:Sell" />
+      <output wsam:Action="http://ws.wscomponent.com/TransactionProcess/SellResponse" message="tns:SellResponse" />
+      <fault wsam:Action="http://ws.wscomponent.com/TransactionProcess/Sell/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="Sell2">
+      <input wsam:Action="http://ws.wscomponent.com/TransactionProcess/Sell2Request" message="tns:Sell2" />
+      <output wsam:Action="http://ws.wscomponent.com/TransactionProcess/Sell2Response" message="tns:Sell2Response" />
+      <fault wsam:Action="http://ws.wscomponent.com/TransactionProcess/Sell2/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="TransactionProcessPortBinding" type="tns:TransactionProcess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="SendTransaction">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Sell">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="Sell2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="TransactionProcess">
+    <port name="TransactionProcessPort" binding="tns:TransactionProcessPortBinding">
+      <soap:address location="http://64.34.163.109:8080/WsTransaction/TransactionProcess" />
+    </port>
+  </service>
+</definitions>

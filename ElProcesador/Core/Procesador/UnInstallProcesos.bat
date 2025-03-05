@@ -1,0 +1,2 @@
+﻿gacutil /u D:/CodigoFuente/ProcesadorNocturno/Core/ProcesadorNocturno/bin/Debug/ImportarEmpleados/ImportarEmpleados.dll
+gacutil /u D:/CodigoFuente/ProcesadorNocturno/Core/ProcesadorNocturno/bin/Debug/MonitoreaCuentas/MonitoreaCuentas.dll

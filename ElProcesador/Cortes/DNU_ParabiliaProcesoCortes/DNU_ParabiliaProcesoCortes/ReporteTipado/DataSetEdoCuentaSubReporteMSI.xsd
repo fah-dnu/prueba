@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetEdoCuentaSubReporteMSI" targetNamespace="http://tempuri.org/DataSetEdoCuentaDebito.xsd" xmlns:mstns="http://tempuri.org/DataSetEdoCuentaDebito.xsd" xmlns="http://tempuri.org/DataSetEdoCuentaDebito.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetEdoCuentaSubReporteMSI" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetEdoCuentaSubReporteMSI" msprop:Generator_UserDSName="DataSetEdoCuentaSubReporteMSI">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableCargosObjetados" msprop:Generator_TableClassName="DataTableCargosObjetadosDataTable" msprop:Generator_TableVarName="tableDataTableCargosObjetados" msprop:Generator_RowChangedName="DataTableCargosObjetadosRowChanged" msprop:Generator_TablePropName="DataTableCargosObjetados" msprop:Generator_RowDeletingName="DataTableCargosObjetadosRowDeleting" msprop:Generator_RowChangingName="DataTableCargosObjetadosRowChanging" msprop:Generator_RowEvHandlerName="DataTableCargosObjetadosRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableCargosObjetadosRowDeleted" msprop:Generator_RowClassName="DataTableCargosObjetadosRow" msprop:Generator_UserTableName="DataTableCargosObjetados" msprop:Generator_RowEvArgName="DataTableCargosObjetadosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FechaOriginal" msprop:Generator_ColumnVarNameInTable="columnFechaOriginal" msprop:Generator_ColumnPropNameInRow="FechaOriginal" msprop:Generator_ColumnPropNameInTable="FechaOriginalColumn" msprop:Generator_UserColumnName="FechaOriginal" type="xs:string" minOccurs="0" />
+              <xs:element name="DescripcionTransaccion" msprop:Generator_ColumnVarNameInTable="columnDescripcionTransaccion" msprop:Generator_ColumnPropNameInRow="DescripcionTransaccion" msprop:Generator_ColumnPropNameInTable="DescripcionTransaccionColumn" msprop:Generator_UserColumnName="DescripcionTransaccion" type="xs:string" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:string" minOccurs="0" />
+              <xs:element name="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" msprop:Generator_UserColumnName="Folio" type="xs:string" minOccurs="0" />
+              <xs:element name="Parcialidad" msprop:Generator_ColumnVarNameInTable="columnParcialidad" msprop:Generator_ColumnPropNameInRow="Parcialidad" msprop:Generator_ColumnPropNameInTable="ParcialidadColumn" msprop:Generator_UserColumnName="Parcialidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Interes" msprop:Generator_ColumnVarNameInTable="columnInteres" msprop:Generator_ColumnPropNameInRow="Interes" msprop:Generator_ColumnPropNameInTable="InteresColumn" msprop:Generator_UserColumnName="Interes" type="xs:string" minOccurs="0" />
+              <xs:element name="IvaInteres" msprop:Generator_ColumnVarNameInTable="columnIvaInteres" msprop:Generator_ColumnPropNameInRow="IvaInteres" msprop:Generator_ColumnPropNameInTable="IvaInteresColumn" msprop:Generator_UserColumnName="IvaInteres" type="xs:string" minOccurs="0" />
+              <xs:element name="Saldo" msprop:Generator_ColumnVarNameInTable="columnSaldo" msprop:Generator_ColumnPropNameInRow="Saldo" msprop:Generator_ColumnPropNameInTable="SaldoColumn" msprop:Generator_UserColumnName="Saldo" type="xs:string" minOccurs="0" />
+              <xs:element name="SaldoTotal" msprop:Generator_ColumnVarNameInTable="columnSaldoTotal" msprop:Generator_ColumnPropNameInRow="SaldoTotal" msprop:Generator_ColumnPropNameInTable="SaldoTotalColumn" msprop:Generator_UserColumnName="SaldoTotal" type="xs:string" minOccurs="0" />
+              <xs:element name="ParcialidadesTotales" msprop:Generator_ColumnVarNameInTable="columnParcialidadesTotales" msprop:Generator_ColumnPropNameInRow="ParcialidadesTotales" msprop:Generator_ColumnPropNameInTable="ParcialidadesTotalesColumn" msprop:Generator_UserColumnName="ParcialidadesTotales" type="xs:string" minOccurs="0" />
+              <xs:element name="Faltan" msprop:Generator_ColumnVarNameInTable="columnFaltan" msprop:Generator_ColumnPropNameInRow="Faltan" msprop:Generator_ColumnPropNameInTable="FaltanColumn" msprop:Generator_UserColumnName="Faltan" type="xs:string" minOccurs="0" />
+              <xs:element name="NumeroParcialidad" msprop:Generator_ColumnVarNameInTable="columnNumeroParcialidad" msprop:Generator_ColumnPropNameInRow="NumeroParcialidad" msprop:Generator_ColumnPropNameInTable="NumeroParcialidadColumn" msprop:Generator_UserColumnName="NumeroParcialidad" type="xs:string" minOccurs="0" />
+              <xs:element name="InteresesMasIva" msprop:Generator_ColumnVarNameInTable="columnInteresesMasIva" msprop:Generator_ColumnPropNameInRow="InteresesMasIva" msprop:Generator_ColumnPropNameInTable="InteresesMasIvaColumn" msprop:Generator_UserColumnName="InteresesMasIva" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalFaltante" msprop:Generator_ColumnVarNameInTable="columnTotalFaltante" msprop:Generator_ColumnPropNameInRow="TotalFaltante" msprop:Generator_ColumnPropNameInTable="TotalFaltanteColumn" msprop:Generator_UserColumnName="TotalFaltante" type="xs:string" minOccurs="0" />
+              <xs:element name="PlanFinanciamiento" msprop:Generator_ColumnVarNameInTable="columnPlanFinanciamiento" msprop:Generator_ColumnPropNameInRow="PlanFinanciamiento" msprop:Generator_ColumnPropNameInTable="PlanFinanciamientoColumn" msprop:Generator_UserColumnName="PlanFinanciamiento" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

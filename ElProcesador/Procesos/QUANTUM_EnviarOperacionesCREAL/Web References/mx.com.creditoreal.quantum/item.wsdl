@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://quantum.creditoreal.com.mx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://quantum.creditoreal.com.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://quantum.creditoreal.com.mx">
+      <s:element name="NuevoCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NuevoClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NuevoClienteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BloqueoDesbloqueo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BloqueoDesbloqueoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BloqueoDesbloqueoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificacionLinea">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificacionLineaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificacionLineaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovimientoCuenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovimientoCuentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovimientoCuentaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NuevoCliente_respuesta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Consecutive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NuevoCliente_respuestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NuevoCliente_respuestaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BloqueoDesbloqueo_respuesta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Consecutive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BloqueoDesbloqueo_respuestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BloqueoDesbloqueo_respuestaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificacionLinea_respuesta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Consecutive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModificacionLinea_respuestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModificacionLinea_respuestaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovimientoCuenta_respuesta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Consecutive" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberCard" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MovimientoCuenta_respuestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MovimientoCuenta_respuestaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Transaccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IdOperation" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Beneficiary" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumberdCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IdCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Branch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Afiliate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Terminal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ticket" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OperatorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Authorization" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Montly" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipeOperation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReasonPayment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransaccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransaccionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NuevoClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:NuevoCliente" />
+  </wsdl:message>
+  <wsdl:message name="NuevoClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:NuevoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueoSoapIn">
+    <wsdl:part name="parameters" element="tns:BloqueoDesbloqueo" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueoSoapOut">
+    <wsdl:part name="parameters" element="tns:BloqueoDesbloqueoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLineaSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificacionLinea" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLineaSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificacionLineaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuentaSoapIn">
+    <wsdl:part name="parameters" element="tns:MovimientoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuentaSoapOut">
+    <wsdl:part name="parameters" element="tns:MovimientoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="NuevoCliente_respuestaSoapIn">
+    <wsdl:part name="parameters" element="tns:NuevoCliente_respuesta" />
+  </wsdl:message>
+  <wsdl:message name="NuevoCliente_respuestaSoapOut">
+    <wsdl:part name="parameters" element="tns:NuevoCliente_respuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueo_respuestaSoapIn">
+    <wsdl:part name="parameters" element="tns:BloqueoDesbloqueo_respuesta" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueo_respuestaSoapOut">
+    <wsdl:part name="parameters" element="tns:BloqueoDesbloqueo_respuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLinea_respuestaSoapIn">
+    <wsdl:part name="parameters" element="tns:ModificacionLinea_respuesta" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLinea_respuestaSoapOut">
+    <wsdl:part name="parameters" element="tns:ModificacionLinea_respuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuenta_respuestaSoapIn">
+    <wsdl:part name="parameters" element="tns:MovimientoCuenta_respuesta" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuenta_respuestaSoapOut">
+    <wsdl:part name="parameters" element="tns:MovimientoCuenta_respuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionSoapIn">
+    <wsdl:part name="parameters" element="tns:Transaccion" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionSoapOut">
+    <wsdl:part name="parameters" element="tns:TransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="NuevoClienteHttpGetIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NuevoClienteHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueoHttpGetIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLineaHttpGetIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLineaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuentaHttpGetIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuentaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NuevoCliente_respuestaHttpGetIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NuevoCliente_respuestaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueo_respuestaHttpGetIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="NumberCard" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueo_respuestaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLinea_respuestaHttpGetIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="NumberCard" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLinea_respuestaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuenta_respuestaHttpGetIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="NumberCard" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuenta_respuestaHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionHttpGetIn">
+    <wsdl:part name="IdOperation" type="s:string" />
+    <wsdl:part name="Beneficiary" type="s:string" />
+    <wsdl:part name="NumberdCard" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="CurrencyCode" type="s:string" />
+    <wsdl:part name="Branch" type="s:string" />
+    <wsdl:part name="Afiliate" type="s:string" />
+    <wsdl:part name="Terminal" type="s:string" />
+    <wsdl:part name="ticket" type="s:string" />
+    <wsdl:part name="OperatorID" type="s:string" />
+    <wsdl:part name="Authorization" type="s:string" />
+    <wsdl:part name="Montly" type="s:string" />
+    <wsdl:part name="TipeOperation" type="s:string" />
+    <wsdl:part name="TransactionId" type="s:string" />
+    <wsdl:part name="ReasonPayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NuevoClienteHttpPostIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NuevoClienteHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueoHttpPostIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLineaHttpPostIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLineaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuentaHttpPostIn">
+    <wsdl:part name="Date" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuentaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="NuevoCliente_respuestaHttpPostIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="NuevoCliente_respuestaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueo_respuestaHttpPostIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="NumberCard" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BloqueoDesbloqueo_respuestaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLinea_respuestaHttpPostIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="NumberCard" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ModificacionLinea_respuestaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuenta_respuestaHttpPostIn">
+    <wsdl:part name="Consecutive" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="NumberCard" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="ResponseCode" type="s:string" />
+    <wsdl:part name="ResponseDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MovimientoCuenta_respuestaHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionHttpPostIn">
+    <wsdl:part name="IdOperation" type="s:string" />
+    <wsdl:part name="Beneficiary" type="s:string" />
+    <wsdl:part name="NumberdCard" type="s:string" />
+    <wsdl:part name="IdCustomer" type="s:string" />
+    <wsdl:part name="Date" type="s:string" />
+    <wsdl:part name="Amount" type="s:string" />
+    <wsdl:part name="CurrencyCode" type="s:string" />
+    <wsdl:part name="Branch" type="s:string" />
+    <wsdl:part name="Afiliate" type="s:string" />
+    <wsdl:part name="Terminal" type="s:string" />
+    <wsdl:part name="ticket" type="s:string" />
+    <wsdl:part name="OperatorID" type="s:string" />
+    <wsdl:part name="Authorization" type="s:string" />
+    <wsdl:part name="Montly" type="s:string" />
+    <wsdl:part name="TipeOperation" type="s:string" />
+    <wsdl:part name="TransactionId" type="s:string" />
+    <wsdl:part name="ReasonPayment" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TransaccionHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="QuantumSoap">
+    <wsdl:operation name="NuevoCliente">
+      <wsdl:input message="tns:NuevoClienteSoapIn" />
+      <wsdl:output message="tns:NuevoClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo">
+      <wsdl:input message="tns:BloqueoDesbloqueoSoapIn" />
+      <wsdl:output message="tns:BloqueoDesbloqueoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea">
+      <wsdl:input message="tns:ModificacionLineaSoapIn" />
+      <wsdl:output message="tns:ModificacionLineaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta">
+      <wsdl:input message="tns:MovimientoCuentaSoapIn" />
+      <wsdl:output message="tns:MovimientoCuentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NuevoCliente_respuesta">
+      <wsdl:input message="tns:NuevoCliente_respuestaSoapIn" />
+      <wsdl:output message="tns:NuevoCliente_respuestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo_respuesta">
+      <wsdl:input message="tns:BloqueoDesbloqueo_respuestaSoapIn" />
+      <wsdl:output message="tns:BloqueoDesbloqueo_respuestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea_respuesta">
+      <wsdl:input message="tns:ModificacionLinea_respuestaSoapIn" />
+      <wsdl:output message="tns:ModificacionLinea_respuestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta_respuesta">
+      <wsdl:input message="tns:MovimientoCuenta_respuestaSoapIn" />
+      <wsdl:output message="tns:MovimientoCuenta_respuestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <wsdl:input message="tns:TransaccionSoapIn" />
+      <wsdl:output message="tns:TransaccionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="QuantumHttpGet">
+    <wsdl:operation name="NuevoCliente">
+      <wsdl:input message="tns:NuevoClienteHttpGetIn" />
+      <wsdl:output message="tns:NuevoClienteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo">
+      <wsdl:input message="tns:BloqueoDesbloqueoHttpGetIn" />
+      <wsdl:output message="tns:BloqueoDesbloqueoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea">
+      <wsdl:input message="tns:ModificacionLineaHttpGetIn" />
+      <wsdl:output message="tns:ModificacionLineaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta">
+      <wsdl:input message="tns:MovimientoCuentaHttpGetIn" />
+      <wsdl:output message="tns:MovimientoCuentaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NuevoCliente_respuesta">
+      <wsdl:input message="tns:NuevoCliente_respuestaHttpGetIn" />
+      <wsdl:output message="tns:NuevoCliente_respuestaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo_respuesta">
+      <wsdl:input message="tns:BloqueoDesbloqueo_respuestaHttpGetIn" />
+      <wsdl:output message="tns:BloqueoDesbloqueo_respuestaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea_respuesta">
+      <wsdl:input message="tns:ModificacionLinea_respuestaHttpGetIn" />
+      <wsdl:output message="tns:ModificacionLinea_respuestaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta_respuesta">
+      <wsdl:input message="tns:MovimientoCuenta_respuestaHttpGetIn" />
+      <wsdl:output message="tns:MovimientoCuenta_respuestaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <wsdl:input message="tns:TransaccionHttpGetIn" />
+      <wsdl:output message="tns:TransaccionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="QuantumHttpPost">
+    <wsdl:operation name="NuevoCliente">
+      <wsdl:input message="tns:NuevoClienteHttpPostIn" />
+      <wsdl:output message="tns:NuevoClienteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo">
+      <wsdl:input message="tns:BloqueoDesbloqueoHttpPostIn" />
+      <wsdl:output message="tns:BloqueoDesbloqueoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea">
+      <wsdl:input message="tns:ModificacionLineaHttpPostIn" />
+      <wsdl:output message="tns:ModificacionLineaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta">
+      <wsdl:input message="tns:MovimientoCuentaHttpPostIn" />
+      <wsdl:output message="tns:MovimientoCuentaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NuevoCliente_respuesta">
+      <wsdl:input message="tns:NuevoCliente_respuestaHttpPostIn" />
+      <wsdl:output message="tns:NuevoCliente_respuestaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo_respuesta">
+      <wsdl:input message="tns:BloqueoDesbloqueo_respuestaHttpPostIn" />
+      <wsdl:output message="tns:BloqueoDesbloqueo_respuestaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea_respuesta">
+      <wsdl:input message="tns:ModificacionLinea_respuestaHttpPostIn" />
+      <wsdl:output message="tns:ModificacionLinea_respuestaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta_respuesta">
+      <wsdl:input message="tns:MovimientoCuenta_respuestaHttpPostIn" />
+      <wsdl:output message="tns:MovimientoCuenta_respuestaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <wsdl:input message="tns:TransaccionHttpPostIn" />
+      <wsdl:output message="tns:TransaccionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuantumSoap" type="tns:QuantumSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NuevoCliente">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/NuevoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/BloqueoDesbloqueo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/ModificacionLinea" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/MovimientoCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuevoCliente_respuesta">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/NuevoCliente_respuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo_respuesta">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/BloqueoDesbloqueo_respuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea_respuesta">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/ModificacionLinea_respuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta_respuesta">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/MovimientoCuenta_respuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <soap:operation soapAction="http://quantum.creditoreal.com.mx/Transaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuantumSoap12" type="tns:QuantumSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NuevoCliente">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/NuevoCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/BloqueoDesbloqueo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/ModificacionLinea" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/MovimientoCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuevoCliente_respuesta">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/NuevoCliente_respuesta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo_respuesta">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/BloqueoDesbloqueo_respuesta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea_respuesta">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/ModificacionLinea_respuesta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta_respuesta">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/MovimientoCuenta_respuesta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <soap12:operation soapAction="http://quantum.creditoreal.com.mx/Transaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuantumHttpGet" type="tns:QuantumHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="NuevoCliente">
+      <http:operation location="/NuevoCliente" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo">
+      <http:operation location="/BloqueoDesbloqueo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea">
+      <http:operation location="/ModificacionLinea" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta">
+      <http:operation location="/MovimientoCuenta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuevoCliente_respuesta">
+      <http:operation location="/NuevoCliente_respuesta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo_respuesta">
+      <http:operation location="/BloqueoDesbloqueo_respuesta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea_respuesta">
+      <http:operation location="/ModificacionLinea_respuesta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta_respuesta">
+      <http:operation location="/MovimientoCuenta_respuesta" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <http:operation location="/Transaccion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuantumHttpPost" type="tns:QuantumHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="NuevoCliente">
+      <http:operation location="/NuevoCliente" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo">
+      <http:operation location="/BloqueoDesbloqueo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea">
+      <http:operation location="/ModificacionLinea" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta">
+      <http:operation location="/MovimientoCuenta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NuevoCliente_respuesta">
+      <http:operation location="/NuevoCliente_respuesta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloqueoDesbloqueo_respuesta">
+      <http:operation location="/BloqueoDesbloqueo_respuesta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificacionLinea_respuesta">
+      <http:operation location="/ModificacionLinea_respuesta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimientoCuenta_respuesta">
+      <http:operation location="/MovimientoCuenta_respuesta" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transaccion">
+      <http:operation location="/Transaccion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Quantum">
+    <wsdl:port name="QuantumSoap" binding="tns:QuantumSoap">
+      <soap:address location="http://quantum.creditoreal.com.mx/quantum.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QuantumSoap12" binding="tns:QuantumSoap12">
+      <soap12:address location="http://quantum.creditoreal.com.mx/quantum.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QuantumHttpGet" binding="tns:QuantumHttpGet">
+      <http:address location="http://quantum.creditoreal.com.mx/quantum.asmx" />
+    </wsdl:port>
+    <wsdl:port name="QuantumHttpPost" binding="tns:QuantumHttpPost">
+      <http:address location="http://quantum.creditoreal.com.mx/quantum.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

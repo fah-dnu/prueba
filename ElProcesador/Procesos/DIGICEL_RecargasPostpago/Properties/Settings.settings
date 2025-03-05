@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DIGICEL_RecargasPostpago.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DIGICEL_RecargasPostpago_wsDNUDigicel_TransactionProcess" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://64.34.163.109:8080/wsDigicel/TransactionProcess</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA62B55D-5EFB-4EA7-874A-F367135B23E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImportarEmpleados</RootNamespace>
+    <AssemblyName>ImportarEmpleados</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Core\Procesador\bin\Debug\ImportarEmpleados\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Mensajero\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FreezeCode.IceCubes.Common">
+      <HintPath>..\..\..\SitiosDeVentas\FreezeCodeDLL\Dependencias\FreezeCode.IceCubes.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="FreezeCode.IceCubes.DataAccess">
+      <HintPath>..\..\..\SitiosDeVentas\FreezeCodeDLL\Dependencias\FreezeCode.IceCubes.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="FreezeCode.IceCubes.Definition">
+      <HintPath>..\..\..\SitiosDeVentas\FreezeCodeDLL\Dependencias\FreezeCode.IceCubes.Definition.dll</HintPath>
+    </Reference>
+    <Reference Include="FreezeCode.IceCubes.Implement.Generic">
+      <HintPath>..\..\..\SitiosDeVentas\FreezeCodeDLL\Dependencias\FreezeCode.IceCubes.Implement.Generic.dll</HintPath>
+    </Reference>
+    <Reference Include="FreezeCode.IceCubes.Loging">
+      <HintPath>..\..\..\SitiosDeVentas\FreezeCodeDLL\Dependencias\FreezeCode.IceCubes.Loging.dll</HintPath>
+    </Reference>
+    <Reference Include="FreezeCode.IceCubes.Security">
+      <HintPath>..\..\..\SitiosDeVentas\FreezeCodeDLL\Dependencias\FreezeCode.IceCubes.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="FreezeCode.IceCubes.SqlServerDataAccess">
+      <HintPath>..\..\..\SitiosDeVentas\FreezeCodeDLL\Dependencias\FreezeCode.IceCubes.SqlServerDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Mensajero\CompraTAESMS\bin\Release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\CentralAdministrativa\Resources\Dll\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\CentralAdministrativa\Resources\Dll\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\..\CentralAdministrativa\Resources\Dll\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\CentralAdministrativa\Resources\Dll\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\..\..\CentralAdministrativa\Resources\Dll\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services">
+      <HintPath>..\..\..\CentralAdministrativa\Resources\Dll\Microsoft.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseDatos\DAOArchivo.cs" />
+    <Compile Include="BaseDatos\DAOConfiguracion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseDatos\DAOEmpleado.cs" />
+    <Compile Include="BaseDatos\BDEmpleados.cs" />
+    <Compile Include="Entidades\Parametro.cs" />
+    <Compile Include="Entidades\RespuestaTransaccional.cs" />
+    <Compile Include="Entidades\ResultadoProceso.cs" />
+    <Compile Include="Entidades\TrxOperacion.cs" />
+    <Compile Include="ImportarEmpleado.cs" />
+    <Compile Include="Entidades\Archivo.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="LogicaNegocio\LNArchivo.cs" />
+    <Compile Include="LogicaNegocio\LNEmpleado.cs" />
+    <Compile Include="LogicaNegocio\LNTransaccional.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades\Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilidades\EsteProceso.cs" />
+    <Compile Include="Utilidades\Numeraciones.cs" />
+    <Compile Include="Web References\WsTransaction\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ws_CEscala\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WsTransaction\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WsTransaction\respuesta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WsTransaction\TransactionProcess.wsdl" />
+    <None Include="Web References\WsTransaction\TransactionProcess.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WsTransaction\trxRespuesta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ws_CEscala\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ws_CEscala\WS_Administracion.wsdl" />
+    <None Include="Web References\ws_CEscala\WS_Administracion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SitiosDeVentas\FreezeCodeDLL\Framework\Framework.csproj">
+      <Project>{70c05f55-1c12-4fcc-86ee-a014901d6400}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\SitiosDeVentas\FreezeCodeDLL\mensajeria\Mensajeria.csproj">
+      <Project>{4b0467f3-d849-414d-8e88-b696c68eca69}</Project>
+      <Name>Mensajeria</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonProcesador\CommonProcesador\CommonProcesador.csproj">
+      <Project>{92E26935-9079-4245-9653-FDD0D92C5C3D}</Project>
+      <Name>CommonProcesador %28CommonProcesador\CommonProcesador%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://64.34.163.109:8080/WsTransaction/TransactionProcess%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsTransaction\</RelPath>
+      <UpdateFromURL>http://64.34.163.109:8080/WsTransaction/TransactionProcess%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ImportarEmpleados_WsTransaction_TransactionProcessService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://64.34.163.109:8080/WS_Administracion/WS_Administracion%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ws_CEscala\</RelPath>
+      <UpdateFromURL>http://64.34.163.109:8080/WS_Administracion/WS_Administracion%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ImportarEmpleados_ws_CEscala_WS_Administracion</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MailRespestaProceso.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://ws.wscomponent.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PaymentProcess" targetNamespace="http://ws.wscomponent.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://64.34.163.109:8080/WsPayment/PaymentProcess?xsd=1" namespace="http://ws.wscomponent.com/" />
+    </xsd:schema>
+  </types>
+  <message name="BalanceRequest">
+    <part name="parameters" element="tns:BalanceRequest" />
+  </message>
+  <message name="BalanceRequestResponse">
+    <part name="parameters" element="tns:BalanceRequestResponse" />
+  </message>
+  <message name="PayCancellation">
+    <part name="parameters" element="tns:PayCancellation" />
+  </message>
+  <message name="PayCancellationResponse">
+    <part name="parameters" element="tns:PayCancellationResponse" />
+  </message>
+  <message name="PayValidation">
+    <part name="parameters" element="tns:PayValidation" />
+  </message>
+  <message name="PayValidationResponse">
+    <part name="parameters" element="tns:PayValidationResponse" />
+  </message>
+  <message name="Pay">
+    <part name="parameters" element="tns:Pay" />
+  </message>
+  <message name="PayResponse">
+    <part name="parameters" element="tns:PayResponse" />
+  </message>
+  <message name="MovsRequest">
+    <part name="parameters" element="tns:MovsRequest" />
+  </message>
+  <message name="MovsRequestResponse">
+    <part name="parameters" element="tns:MovsRequestResponse" />
+  </message>
+  <message name="Reward">
+    <part name="parameters" element="tns:Reward" />
+  </message>
+  <message name="RewardResponse">
+    <part name="parameters" element="tns:RewardResponse" />
+  </message>
+  <message name="FullBalanceRequest">
+    <part name="parameters" element="tns:FullBalanceRequest" />
+  </message>
+  <message name="FullBalanceRequestResponse">
+    <part name="parameters" element="tns:FullBalanceRequestResponse" />
+  </message>
+  <message name="PhoneRequest">
+    <part name="parameters" element="tns:PhoneRequest" />
+  </message>
+  <message name="PhoneRequestResponse">
+    <part name="parameters" element="tns:PhoneRequestResponse" />
+  </message>
+  <message name="NewAccount">
+    <part name="parameters" element="tns:NewAccount" />
+  </message>
+  <message name="NewAccountResponse">
+    <part name="parameters" element="tns:NewAccountResponse" />
+  </message>
+  <portType name="PaymentProcess">
+    <operation name="BalanceRequest">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/BalanceRequestRequest" message="tns:BalanceRequest" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/BalanceRequestResponse" message="tns:BalanceRequestResponse" />
+    </operation>
+    <operation name="PayCancellation">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/PayCancellationRequest" message="tns:PayCancellation" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/PayCancellationResponse" message="tns:PayCancellationResponse" />
+    </operation>
+    <operation name="PayValidation">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/PayValidationRequest" message="tns:PayValidation" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/PayValidationResponse" message="tns:PayValidationResponse" />
+    </operation>
+    <operation name="Pay">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/PayRequest" message="tns:Pay" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/PayResponse" message="tns:PayResponse" />
+    </operation>
+    <operation name="MovsRequest">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/MovsRequestRequest" message="tns:MovsRequest" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/MovsRequestResponse" message="tns:MovsRequestResponse" />
+    </operation>
+    <operation name="Reward">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/RewardRequest" message="tns:Reward" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/RewardResponse" message="tns:RewardResponse" />
+    </operation>
+    <operation name="FullBalanceRequest">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/FullBalanceRequestRequest" message="tns:FullBalanceRequest" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/FullBalanceRequestResponse" message="tns:FullBalanceRequestResponse" />
+    </operation>
+    <operation name="PhoneRequest">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/PhoneRequestRequest" message="tns:PhoneRequest" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/PhoneRequestResponse" message="tns:PhoneRequestResponse" />
+    </operation>
+    <operation name="NewAccount">
+      <input wsam:Action="http://ws.wscomponent.com/PaymentProcess/NewAccountRequest" message="tns:NewAccount" />
+      <output wsam:Action="http://ws.wscomponent.com/PaymentProcess/NewAccountResponse" message="tns:NewAccountResponse" />
+    </operation>
+  </portType>
+  <binding name="PaymentProcessPortBinding" type="tns:PaymentProcess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="BalanceRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PayCancellation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PayValidation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Pay">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="MovsRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Reward">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="FullBalanceRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="PhoneRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="NewAccount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PaymentProcess">
+    <port name="PaymentProcessPort" binding="tns:PaymentProcessPortBinding">
+      <soap:address location="http://64.34.163.109:8080/WsPayment/PaymentProcess" />
+    </port>
+  </service>
+</definitions>

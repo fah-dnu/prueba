@@ -1,0 +1,178 @@
+﻿<Config_Servicio_Generador>
+  <Core>
+    <Log4j ubicacion = "..\Conf\log4jGeneradorCore.xml" >
+      <Eventos category_name = "Eventos_Core" />
+      <Errores category_name = "Errores_Core" />
+    </Log4j>
+    <!--
+	<SMTP host="mail.e-transactions.com.mx" port= "9025" usr="66c8d84807e0a820f0eb4199ddf63ed9b6f8790cbf59a6b14f71871ff82b694da1d07b21cf832c07a9d510851c1d7d6f" pwd="7e95082ae321f78117ef44020878e31e" />
+	-->
+    <SMTP host="mail.dnu.mx" port= "587" usr="7B3D48CED8C6735C2DE6A0D4AAF5A2BD" pwd="0D6322AB9219AF72A4BEC69CE3F91C9D" />
+
+  </Core>
+  <Generador>
+    <Log4j ubicacion = "..\Conf\log4jGenerador.xml" />
+  </Generador>
+  <Configuracion nombre="OperacionesStandIN">
+    <PlugIn clave="StandIN" />
+    <Ejecucion hora="02:08" />
+    <Conexion>
+      <Base_datos path="127.0.0.1" port="0" usr="E20AE5F3F7F502E8" pwd="F300A9894112AAB0" bd="Autorizador_SmartPoints" />
+      <sp_ejecucion nombre="conc_obtieneOperacionesSmartPoints_StandIn" />
+      <timeouts conexion="90" respuesta="360"/>
+    </Conexion>
+    <Archivo path="..\ArchivosGenerados\DNU_StandIn_" sufijoFecha="yyyyMMdd" CadenaSufijo=""  tipoarchivo="txt" enviar_vacio="True" />
+    <Distribucion>
+      <Destinos tipo = "EMAIL">
+        <Destino address="mauricio.trujillo@smartpoints.mx" max_size="10485760" />
+        <Destino address="Elizabeth.castellanos@smartpoints.mx" max_size="10485760" />
+        <!--   
+			<Destino address="trujillo2@it-site.com" max_size="10485760" />
+			-->
+      </Destinos>
+
+
+    </Distribucion>
+    <Log>
+      <Eventos category_name="Ev_ConcTAE" />
+      <Errores category_name="Er_ConcTAE" />
+    </Log>
+  </Configuracion>
+  <Configuracion nombre="SMARTLOB">
+    <PlugIn clave="LOB" />
+    <Ejecucion hora="04:00"/>
+    <Conexion>
+      <Base_datos path="sitios.dnu.com.mx" port="0" usr="E20AE5F3F7F502E8" pwd="F300A9894112AAB0" bd="Autorizador_SmartPoints" />
+      <sp_ejecucion nombre="conc_ObtieneOperacionesSmartPoints" />
+      <timeouts conexion="90" respuesta="360"/>
+    </Conexion>
+    <Archivo path="D:\FTP_root\LocalUser\LOB_" sufijoFecha="yyyyMMdd" CadenaSufijo="" CadenaPrefijo="Conciliacion_"   tipoarchivo="txt" enviar_vacio="True" />
+    <Distribucion>
+      <Destinos tipo="FTP">
+        <!-- <Destino path="www.it-site.com" port="21" usr="F9D38C7BFC7A0E8D" pwd="BC2D0E5104C2A64E" ubicacion="/httpdocs/Conciliador" />
+                                <Destino path="187.174.100.41" port="21" tipoftp="FTP"  usr="EBEF7400AA2CC7AF" pwd="5F58B4D75B36D417" ubicacion="/IN" />
+                -->
+        <Destino path="148.223.103.76" port="3201" tipoftp="SFTP" khfile ="" identityfile = "" usr="7F914FC08286FE9F37EFEC6F6204ADCA" pwd="9FE69EEDEC0EF9AFEE9148893311E4AC" ubicacion="/home/smartpointslob" />
+      </Destinos>
+    </Distribucion>
+    <Log>
+      <Eventos category_name="Ev_ConcTAE" />
+      <Errores category_name="Er_ConcTAE" />
+    </Log>
+  </Configuracion>
+
+  <Configuracion nombre="SMARTDEVLYN">
+    <PlugIn clave="DEVLYN" />
+    <Ejecucion hora="04:08"/>
+    <Conexion>
+      <Base_datos path="sitios.dnu.com.mx" port="0" usr="E20AE5F3F7F502E8" pwd="F300A9894112AAB0" bd="Autorizador_SmartPoints" />
+      <sp_ejecucion nombre="conc_ObtieneOperacionesSmartPoints" />
+      <timeouts conexion="90" respuesta="360"/>
+    </Conexion>
+    <Archivo path="D:\FTP_root\LocalUser\Devlyn_" sufijoFecha="yyyyMMdd" CadenaSufijo="" CadenaPrefijo="Conciliacion_"   tipoarchivo="txt" enviar_vacio="True" />
+    <Distribucion>
+      <Destinos tipo="FTP">
+        <!-- <Destino path="www.it-site.com" port="21" usr="F9D38C7BFC7A0E8D" pwd="BC2D0E5104C2A64E" ubicacion="/httpdocs/Conciliador" />
+                                <Destino path="187.174.100.41" port="21" tipoftp="FTP"  usr="EBEF7400AA2CC7AF" pwd="5F58B4D75B36D417" ubicacion="/IN" />
+                -->
+        <Destino path="ftp.devlyn.me" port="21" tipoftp="FTP" khfile ="" identityfile = "" usr="7F914FC08286FE9FCCEE2341C8811620EF18A59E7E813221" pwd="4B2CCB069DB0371B852D51A66E761C1C28AE36987D18C760" ubicacion="" />
+      </Destinos>
+    </Distribucion>
+    <Log>
+      <Eventos category_name="Ev_ConcTAE" />
+      <Errores category_name="Er_ConcTAE" />
+    </Log>
+  </Configuracion>
+
+  <Configuracion nombre="SMARTTOKS">
+    <PlugIn clave="TOKS" />
+    <Ejecucion hora="04:09"/>
+    <Conexion>
+      <Base_datos path="sitios.dnu.com.mx" port="0" usr="E20AE5F3F7F502E8" pwd="F300A9894112AAB0" bd="Autorizador_SmartPoints" />
+      <sp_ejecucion nombre="conc_ObtieneOperacionesSmartPoints" />
+      <timeouts conexion="90" respuesta="360"/>
+    </Conexion>
+    <Archivo path="D:\FTP_root\LocalUser\ftp_toks\SPTOKS_" sufijoFecha="yyyyMMdd" CadenaSufijo="" CadenaPrefijo="Conciliacion_"   tipoarchivo="txt" enviar_vacio="True" />
+    <Distribucion>
+      <Destinos tipo="FTP">
+        <!-- <Destino path="www.it-site.com" port="21" usr="F9D38C7BFC7A0E8D" pwd="BC2D0E5104C2A64E" ubicacion="/httpdocs/Conciliador" />
+                                <Destino path="187.174.100.41" port="21" tipoftp="FTP"  usr="EBEF7400AA2CC7AF" pwd="5F58B4D75B36D417" ubicacion="/IN" />
+                -->
+
+      </Destinos>
+    </Distribucion>
+    <Log>
+      <Eventos category_name="Ev_ConcTAE" />
+      <Errores category_name="Er_ConcTAE" />
+    </Log>
+  </Configuracion>
+
+  <Configuracion nombre="SMARTPANDA">
+    <PlugIn clave="PANDA" />
+    <Ejecucion hora="04:09"/>
+    <Conexion>
+      <Base_datos path="sitios.dnu.com.mx" port="0" usr="E20AE5F3F7F502E8" pwd="F300A9894112AAB0" bd="Autorizador_SmartPoints" />
+      <sp_ejecucion nombre="conc_ObtieneOperacionesSmartPoints" />
+      <timeouts conexion="90" respuesta="360"/>
+    </Conexion>
+    <Archivo path="D:\FTP_root\LocalUser\ftp_toks\SPPANDA_" sufijoFecha="yyyyMMdd" CadenaSufijo="" CadenaPrefijo="Conciliacion_"   tipoarchivo="txt" enviar_vacio="True" />
+    <Distribucion>
+      <Destinos tipo="FTP">
+        <!-- <Destino path="www.it-site.com" port="21" usr="F9D38C7BFC7A0E8D" pwd="BC2D0E5104C2A64E" ubicacion="/httpdocs/Conciliador" />
+                                <Destino path="187.174.100.41" port="21" tipoftp="FTP"  usr="EBEF7400AA2CC7AF" pwd="5F58B4D75B36D417" ubicacion="/IN" />
+                -->
+
+      </Destinos>
+    </Distribucion>
+    <Log>
+      <Eventos category_name="Ev_ConcTAE" />
+      <Errores category_name="Er_ConcTAE" />
+    </Log>
+
+  </Configuracion>
+  <Configuracion nombre="SMARTSHAKE">
+    <PlugIn clave="SHAKESHAKE" />
+    <Ejecucion hora="04:09"/>
+    <Conexion>
+      <Base_datos path="sitios.dnu.com.mx" port="0" usr="E20AE5F3F7F502E8" pwd="F300A9894112AAB0" bd="Autorizador_SmartPoints" />
+      <sp_ejecucion nombre="conc_ObtieneOperacionesSmartPoints" />
+      <timeouts conexion="90" respuesta="360"/>
+    </Conexion>
+    <Archivo path="D:\FTP_root\LocalUser\ftp_toks\SPSHAKE_" sufijoFecha="yyyyMMdd" CadenaSufijo="" CadenaPrefijo="Conciliacion_"   tipoarchivo="txt" enviar_vacio="True" />
+    <Distribucion>
+      <Destinos tipo="FTP">
+        <!-- <Destino path="www.it-site.com" port="21" usr="F9D38C7BFC7A0E8D" pwd="BC2D0E5104C2A64E" ubicacion="/httpdocs/Conciliador" />
+                                <Destino path="187.174.100.41" port="21" tipoftp="FTP"  usr="EBEF7400AA2CC7AF" pwd="5F58B4D75B36D417" ubicacion="/IN" />
+                -->
+
+      </Destinos>
+    </Distribucion>
+    <Log>
+      <Eventos category_name="Ev_ConcTAE" />
+      <Errores category_name="Er_ConcTAE" />
+    </Log>
+    </Configuracion>
+  <Configuracion nombre="SMARTWITCH">
+    <PlugIn clave="WITCHWITCH" />
+    <Ejecucion hora="04:09"/>
+    <Conexion>
+      <Base_datos path="sitios.dnu.com.mx" port="0" usr="E20AE5F3F7F502E8" pwd="F300A9894112AAB0" bd="Autorizador_SmartPoints" />
+      <sp_ejecucion nombre="conc_ObtieneOperacionesSmartPoints" />
+      <timeouts conexion="90" respuesta="360"/>
+    </Conexion>
+    <Archivo path="D:\FTP_root\LocalUser\ftp_toks\SPSHAKE_" sufijoFecha="yyyyMMdd" CadenaSufijo="" CadenaPrefijo="Conciliacion_"   tipoarchivo="txt" enviar_vacio="True" />
+    <Distribucion>
+      <Destinos tipo="FTP">
+        <!-- <Destino path="www.it-site.com" port="21" usr="F9D38C7BFC7A0E8D" pwd="BC2D0E5104C2A64E" ubicacion="/httpdocs/Conciliador" />
+                                <Destino path="187.174.100.41" port="21" tipoftp="FTP"  usr="EBEF7400AA2CC7AF" pwd="5F58B4D75B36D417" ubicacion="/IN" />
+                -->
+
+      </Destinos>
+    </Distribucion>
+    <Log>
+      <Eventos category_name="Ev_ConcTAE" />
+      <Errores category_name="Er_ConcTAE" />
+    </Log>
+  </Configuracion>
+
+</Config_Servicio_Generador>

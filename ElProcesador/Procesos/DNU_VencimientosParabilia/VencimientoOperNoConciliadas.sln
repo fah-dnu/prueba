@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VencimientoOperNoConciliadas", "VencimientoOperNoConciliadas.csproj", "{D8BFDAB0-6062-4366-B4FD-9D8DAEE4CAD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestServiciosParabilia", "TestServiciosParabilia\TestServiciosParabilia.csproj", "{C68422EF-0BE9-42FF-837F-7F2E659EAE8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8BFDAB0-6062-4366-B4FD-9D8DAEE4CAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BFDAB0-6062-4366-B4FD-9D8DAEE4CAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BFDAB0-6062-4366-B4FD-9D8DAEE4CAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BFDAB0-6062-4366-B4FD-9D8DAEE4CAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C68422EF-0BE9-42FF-837F-7F2E659EAE8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C68422EF-0BE9-42FF-837F-7F2E659EAE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C68422EF-0BE9-42FF-837F-7F2E659EAE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C68422EF-0BE9-42FF-837F-7F2E659EAE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D687B20-2D96-41E3-9879-042850670438}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://64.34.163.109:9090/tfs/dnu_procesos
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TestServiciosParabilia\\TestServiciosParabilia.csproj
+		SccProjectName1 = TestServiciosParabilia
+		SccLocalPath1 = TestServiciosParabilia
+		SccProjectUniqueName2 = VencimientoOperNoConciliadas.csproj
+		SccLocalPath2 = .
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,133 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pruebas", "pruebas\pruebas.csproj", "{8B8CC772-DCA2-4B29-9407-F1C9A089EAAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliaProcesoCortes", "DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes.csproj", "{3E7B1490-05C4-41FA-8E04-74740E9F53D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_Multipacs", "DNU_Multipacs\DNU_Multipacs.csproj", "{453B2479-2DD5-410E-98F7-5DF90AEDC4D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliaProcesoCortes.Common", "DNU_ParabiliaProcesoCortes.Common\DNU_ParabiliaProcesoCortes.Common.csproj", "{1239A815-C984-4A93-A597-FC0A7F0DC8CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliaProcesoCobranza", "DNU_ParabiliaProcesoCobranza\DNU_ParabiliaProcesoCobranza.csproj", "{F0CE0639-A80C-45B2-8145-D9226C23C2A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliaProcesoAnualidad", "DNU_ParabiliaProcesoAnualidad\DNU_ParabiliaProcesoAnualidad.csproj", "{1921946C-04A3-4143-8672-037AE9EB8E39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_SFTP", "DNU_SFTP\DNU_SFTP.csproj", "{CB8022D3-E288-401A-8C59-445D44299467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProbarConexionAzure", "ProbarConexionAzure\ProbarConexionAzure.csproj", "{5AF84763-E845-4F30-A60A-13F0DB1FBD8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ConexionAWS", "DNU_ConexionAWS\DNU_ConexionAWS.csproj", "{F43AE308-736E-444F-A98E-7C1AADF4FFE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliumProcesoMSI", "DNU_ParabiliumProcesoMSI\DNU_ParabiliumProcesoMSI.csproj", "{DAD818C8-9C7D-466C-8039-3499141A6002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliaBloqDesbloqueoTDC", "DNU_ParabiliaBloqDesbloqueoTDC\DNU_ParabiliaBloqDesbloqueoTDC.csproj", "{8FF42990-DFC0-420A-9A9F-E4260D8ABEB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNU_ParabiliumReportesCR", "DNU_ParabiliumReportesCR\DNU_ParabiliumReportesCR.csproj", "{468507C0-8761-4F16-9675-E470D2E760DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B8CC772-DCA2-4B29-9407-F1C9A089EAAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8CC772-DCA2-4B29-9407-F1C9A089EAAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8CC772-DCA2-4B29-9407-F1C9A089EAAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8CC772-DCA2-4B29-9407-F1C9A089EAAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E7B1490-05C4-41FA-8E04-74740E9F53D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E7B1490-05C4-41FA-8E04-74740E9F53D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E7B1490-05C4-41FA-8E04-74740E9F53D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E7B1490-05C4-41FA-8E04-74740E9F53D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{453B2479-2DD5-410E-98F7-5DF90AEDC4D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{453B2479-2DD5-410E-98F7-5DF90AEDC4D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{453B2479-2DD5-410E-98F7-5DF90AEDC4D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{453B2479-2DD5-410E-98F7-5DF90AEDC4D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1239A815-C984-4A93-A597-FC0A7F0DC8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1239A815-C984-4A93-A597-FC0A7F0DC8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1239A815-C984-4A93-A597-FC0A7F0DC8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1239A815-C984-4A93-A597-FC0A7F0DC8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CE0639-A80C-45B2-8145-D9226C23C2A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CE0639-A80C-45B2-8145-D9226C23C2A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CE0639-A80C-45B2-8145-D9226C23C2A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CE0639-A80C-45B2-8145-D9226C23C2A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1921946C-04A3-4143-8672-037AE9EB8E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1921946C-04A3-4143-8672-037AE9EB8E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1921946C-04A3-4143-8672-037AE9EB8E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1921946C-04A3-4143-8672-037AE9EB8E39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB8022D3-E288-401A-8C59-445D44299467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB8022D3-E288-401A-8C59-445D44299467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB8022D3-E288-401A-8C59-445D44299467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB8022D3-E288-401A-8C59-445D44299467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF84763-E845-4F30-A60A-13F0DB1FBD8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF84763-E845-4F30-A60A-13F0DB1FBD8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF84763-E845-4F30-A60A-13F0DB1FBD8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF84763-E845-4F30-A60A-13F0DB1FBD8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F43AE308-736E-444F-A98E-7C1AADF4FFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F43AE308-736E-444F-A98E-7C1AADF4FFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F43AE308-736E-444F-A98E-7C1AADF4FFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F43AE308-736E-444F-A98E-7C1AADF4FFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAD818C8-9C7D-466C-8039-3499141A6002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD818C8-9C7D-466C-8039-3499141A6002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD818C8-9C7D-466C-8039-3499141A6002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD818C8-9C7D-466C-8039-3499141A6002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FF42990-DFC0-420A-9A9F-E4260D8ABEB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FF42990-DFC0-420A-9A9F-E4260D8ABEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FF42990-DFC0-420A-9A9F-E4260D8ABEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FF42990-DFC0-420A-9A9F-E4260D8ABEB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468507C0-8761-4F16-9675-E470D2E760DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468507C0-8761-4F16-9675-E470D2E760DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468507C0-8761-4F16-9675-E470D2E760DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468507C0-8761-4F16-9675-E470D2E760DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2B38B37-0025-4E9E-BAE5-C7CEC7068D6F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://64.34.163.109:9090/tfs/dnu_codigofuente
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = pruebas\\pruebas.csproj
+		SccProjectName1 = pruebas
+		SccLocalPath1 = pruebas
+		SccProjectUniqueName2 = DNU_ParabiliaProcesoCortes\\DNU_ParabiliaProcesoCortes\\DNU_ParabiliaProcesoCortes.csproj
+		SccProjectName2 = DNU_ParabiliaProcesoCortes/DNU_ParabiliaProcesoCortes
+		SccLocalPath2 = DNU_ParabiliaProcesoCortes\\DNU_ParabiliaProcesoCortes
+		SccProjectUniqueName3 = DNU_Multipacs\\DNU_Multipacs.csproj
+		SccProjectName3 = DNU_Multipacs
+		SccLocalPath3 = DNU_Multipacs
+		SccProjectUniqueName4 = DNU_ParabiliaProcesoCortes.Common\\DNU_ParabiliaProcesoCortes.Common.csproj
+		SccProjectName4 = DNU_ParabiliaProcesoCortes.Common
+		SccLocalPath4 = DNU_ParabiliaProcesoCortes.Common
+		SccProjectUniqueName5 = DNU_ParabiliaProcesoCobranza\\DNU_ParabiliaProcesoCobranza.csproj
+		SccProjectName5 = DNU_ParabiliaProcesoCobranza
+		SccLocalPath5 = DNU_ParabiliaProcesoCobranza
+		SccProjectUniqueName6 = DNU_ParabiliaProcesoAnualidad\\DNU_ParabiliaProcesoAnualidad.csproj
+		SccProjectName6 = DNU_ParabiliaProcesoAnualidad
+		SccLocalPath6 = DNU_ParabiliaProcesoAnualidad
+		SccProjectUniqueName7 = DNU_SFTP\\DNU_SFTP.csproj
+		SccProjectName7 = DNU_SFTP
+		SccLocalPath7 = DNU_SFTP
+		SccProjectUniqueName8 = ProbarConexionAzure\\ProbarConexionAzure.csproj
+		SccProjectName8 = ProbarConexionAzure
+		SccLocalPath8 = ProbarConexionAzure
+		SccProjectUniqueName9 = DNU_ConexionAWS\\DNU_ConexionAWS.csproj
+		SccProjectName9 = DNU_ConexionAWS
+		SccLocalPath9 = DNU_ConexionAWS
+		SccProjectUniqueName10 = DNU_ParabiliumProcesoMSI\\DNU_ParabiliumProcesoMSI.csproj
+		SccProjectName10 = DNU_ParabiliumProcesoMSI
+		SccLocalPath10 = DNU_ParabiliumProcesoMSI
+		SccProjectUniqueName11 = DNU_ParabiliaBloqDesbloqueoTDC\\DNU_ParabiliaBloqDesbloqueoTDC.csproj
+		SccProjectName11 = DNU_ParabiliaBloqDesbloqueoTDC
+		SccLocalPath11 = DNU_ParabiliaBloqDesbloqueoTDC
+		SccProjectUniqueName11 = DNU_ParabiliumReportesCR\\DNU_ParabiliumReportesCR.csproj
+		SccProjectName11 = DNU_ParabiliumReportesCR
+		SccLocalPath11 = DNU_ParabiliumReportesCR
+	EndGlobalSection
+EndGlobal

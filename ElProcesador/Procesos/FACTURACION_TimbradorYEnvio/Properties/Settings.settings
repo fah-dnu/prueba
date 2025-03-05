@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FACTURACION_Timbrador.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FACTURACION_Timbrador_wsFacturacion_FactWSFront" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.mysuitecfdi.com/mx.com.fact.wsfront/FactWSFront.asmx</Value>
+    </Setting>
+    <Setting Name="FACTURACION_TimbradorYEnvio_wsFacturacion_FactWSFront" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.mysuitecfdi.com/mx.com.fact.wsfront/FactWSFront.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

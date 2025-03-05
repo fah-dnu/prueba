@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.wscomponent.com/" targetNamespace="http://ws.wscomponent.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Bonificacion" type="tns:Bonificacion" />
+  <xs:element name="BonificacionResponse" type="tns:BonificacionResponse" />
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="Sell" type="tns:Sell" />
+  <xs:element name="Sell2" type="tns:Sell2" />
+  <xs:element name="Sell2Response" type="tns:Sell2Response" />
+  <xs:element name="Sell3" type="tns:Sell3" />
+  <xs:element name="Sell3Response" type="tns:Sell3Response" />
+  <xs:element name="SellResponse" type="tns:SellResponse" />
+  <xs:element name="SellValidation" type="tns:SellValidation" />
+  <xs:element name="SellValidationResponse" type="tns:SellValidationResponse" />
+  <xs:element name="SendTransaction" type="tns:SendTransaction" />
+  <xs:element name="SendTransactionResponse" type="tns:SendTransactionResponse" />
+  <xs:complexType name="Bonificacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+      <xs:element name="Importe" type="xs:float" />
+      <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+      <xs:element minOccurs="0" name="Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="Compania" type="xs:string" />
+      <xs:element minOccurs="0" name="FormaPago" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BonificacionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:trxRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="trxRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autorizacion" type="xs:string" />
+      <xs:element name="codigoRespuesta" type="xs:int" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="importe" type="xs:float" />
+      <xs:element name="importeBonificado" type="xs:float" />
+      <xs:element minOccurs="0" name="leyenda" type="xs:string" />
+      <xs:element minOccurs="0" name="referencia" type="xs:string" />
+      <xs:element name="saldo" type="xs:float" />
+      <xs:element minOccurs="0" name="terminal" type="xs:string" />
+      <xs:element minOccurs="0" name="ticket" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SellValidation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+      <xs:element name="Importe" type="xs:float" />
+      <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+      <xs:element minOccurs="0" name="Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="Compania" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SellValidationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:trxRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_pIsReversal" type="xs:string" />
+      <xs:element minOccurs="0" name="_pTransactionTyper" type="xs:string" />
+      <xs:element minOccurs="0" name="_pVersionNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="_pFieldInError" type="xs:string" />
+      <xs:element minOccurs="0" name="_pOriginalEntity" type="xs:string" />
+      <xs:element minOccurs="0" name="_pDestinationEntity" type="xs:string" />
+      <xs:element minOccurs="0" name="_pTransactionTypeCode" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAccountTypeCode1" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAccountTypeCode2" type="xs:string" />
+      <xs:element minOccurs="0" name="_pCurrencyCode" type="xs:string" />
+      <xs:element minOccurs="0" name="_pDecimalPlace" type="xs:string" />
+      <xs:element minOccurs="0" name="_pTransactionAmount" type="xs:string" />
+      <xs:element minOccurs="0" name="_pTPVDate" type="xs:string" />
+      <xs:element minOccurs="0" name="_pTPVTime" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAccessCard" type="xs:string" />
+      <xs:element minOccurs="0" name="_pVerficationCard" type="xs:string" />
+      <xs:element minOccurs="0" name="_pPOSEnviroment" type="xs:string" />
+      <xs:element minOccurs="0" name="_pSecurityCard" type="xs:string" />
+      <xs:element minOccurs="0" name="_pMerchantType" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAcquiringInstitutionIdentification" type="xs:string" />
+      <xs:element minOccurs="0" name="_pTrack2" type="xs:string" />
+      <xs:element minOccurs="0" name="_pRetrievalReferenceNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="_pCardAcceptorTerminal" type="xs:string" />
+      <xs:element minOccurs="0" name="_pCardAcceptorIdentification" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAditionalDataPrivate" type="xs:string" />
+      <xs:element minOccurs="0" name="_pPINData" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAdditionalAmounts" type="xs:string" />
+      <xs:element minOccurs="0" name="_pOriginalTransactionTypeCode" type="xs:string" />
+      <xs:element minOccurs="0" name="_pOriginalTraceAuditNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="_pOriginalDateTime" type="xs:string" />
+      <xs:element minOccurs="0" name="_pOriginalAcquiringInstitutionIdentification" type="xs:string" />
+      <xs:element minOccurs="0" name="_pTransportData" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAccessAcountType" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAccessAcountIdentifier" type="xs:string" />
+      <xs:element minOccurs="0" name="_pServiceReferenceNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="_pInstitucionCode" type="xs:string" />
+      <xs:element minOccurs="0" name="_pPayee" type="xs:string" />
+      <xs:element minOccurs="0" name="_pAdditionalSKUS" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SendTransactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:respuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="respuesta">
+    <xs:sequence>
+      <xs:element name="tipo" type="xs:int" />
+      <xs:element minOccurs="0" name="_rAdditionalAmounts" type="xs:string" />
+      <xs:element minOccurs="0" name="_rAuthorizationResponse" type="xs:string" />
+      <xs:element minOccurs="0" name="_rCardIssuerTelephoneNumber" type="xs:string" />
+      <xs:element minOccurs="0" name="_rDescResponseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="_rMessageAcceptorPrint" type="xs:string" />
+      <xs:element minOccurs="0" name="_rMessageAcceptorScreen" type="xs:string" />
+      <xs:element minOccurs="0" name="_rMessageClientScreen" type="xs:string" />
+      <xs:element minOccurs="0" name="_rMessageClientTicket" type="xs:string" />
+      <xs:element name="_rResponseArrived" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_rResponseCode" type="xs:string" />
+      <xs:element minOccurs="0" name="_rResult" type="xs:string" />
+      <xs:element name="_rTimeOut" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Sell2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+      <xs:element name="Importe" type="xs:float" />
+      <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+      <xs:element minOccurs="0" name="Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="Compania" type="xs:string" />
+      <xs:element minOccurs="0" name="Cliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Sell2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:trxRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Sell3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+      <xs:element name="Importe" type="xs:float" />
+      <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+      <xs:element minOccurs="0" name="Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="Compania" type="xs:string" />
+      <xs:element minOccurs="0" name="FormaPago" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Sell3Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:trxRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Sell">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" type="xs:string" />
+      <xs:element minOccurs="0" name="MedioPago" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursal" type="xs:string" />
+      <xs:element minOccurs="0" name="Afiliacion" type="xs:string" />
+      <xs:element minOccurs="0" name="Terminal" type="xs:string" />
+      <xs:element name="Importe" type="xs:float" />
+      <xs:element minOccurs="0" name="Referencia" type="xs:string" />
+      <xs:element minOccurs="0" name="Ticket" type="xs:string" />
+      <xs:element minOccurs="0" name="Compania" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SellResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:trxRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

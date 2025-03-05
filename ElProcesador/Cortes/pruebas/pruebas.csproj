@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8B8CC772-DCA2-4B29-9407-F1C9A089EAAD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>pruebas</RootNamespace>
+    <AssemblyName>pruebas</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonProcesador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9bb8ec256b6b2c12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\CommonProcesador.dll</HintPath>
+    </Reference>
+    <Reference Include="Dnu.AutorizadorParabiliaAzure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8eefc4c44b61d27c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\referenciasDll\azureV3\Dnu.AutorizadorParabiliaAzure.dll</HintPath>
+    </Reference>
+    <Reference Include="DNU_Multipacs">
+      <HintPath>..\DNU_Multipacs\bin\Debug\DNU_Multipacs.dll</HintPath>
+    </Reference>
+    <Reference Include="Executer, Version=1.3.0.0, Culture=neutral, PublicKeyToken=cbbe65492bb50e92, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoAnualidad\ReferenciaDll\Executer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interfases, Version=1.1.0.0, Culture=neutral, PublicKeyToken=19fbb44e554115c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoAnualidad\ReferenciaDll\Interfases.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault">
+      <HintPath>azure\Microsoft.Azure.KeyVault.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.WebKey">
+      <HintPath>azure\Microsoft.Azure.KeyVault.WebKey.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <HintPath>azure\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\referenciasDll\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\referenciasDll\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\referenciasDll\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime">
+      <HintPath>azure\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure">
+      <HintPath>azure\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider">
+      <HintPath>azure\Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="NewRelic.Api.Agent, Version=8.50.0.0, Culture=neutral, PublicKeyToken=06552fced0b33d87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\referenciasDll\NewRelic.Api.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>azure\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2020.0.1.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\referenciasDll\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DNU_ParabiliaProcesoAnualidad\DNU_ParabiliaProcesoAnualidad.csproj">
+      <Project>{1921946C-04A3-4143-8672-037AE9EB8E39}</Project>
+      <Name>DNU_ParabiliaProcesoAnualidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNU_ParabiliaProcesoCobranza\DNU_ParabiliaProcesoCobranza.csproj">
+      <Project>{F0CE0639-A80C-45B2-8145-D9226C23C2A7}</Project>
+      <Name>DNU_ParabiliaProcesoCobranza</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes\DNU_ParabiliaProcesoCortes.csproj">
+      <Project>{3E7B1490-05C4-41FA-8E04-74740E9F53D4}</Project>
+      <Name>DNU_ParabiliaProcesoCortes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNU_ParabiliumProcesoMSI\DNU_ParabiliumProcesoMSI.csproj">
+      <Project>{DAD818C8-9C7D-466C-8039-3499141A6002}</Project>
+      <Name>DNU_ParabiliumProcesoMSI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DNU_SFTP\DNU_SFTP.csproj">
+      <Project>{CB8022D3-E288-401A-8C59-445D44299467}</Project>
+      <Name>DNU_SFTP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="azureV2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="azure\Microsoft.Azure.KeyVault.dll" />
+    <Content Include="azure\Microsoft.Azure.KeyVault.WebKey.dll" />
+    <Content Include="azure\Microsoft.IdentityModel.Clients.ActiveDirectory.dll" />
+    <Content Include="azure\Microsoft.Rest.ClientRuntime.Azure.dll" />
+    <Content Include="azure\Microsoft.Rest.ClientRuntime.dll" />
+    <Content Include="azure\Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider.dll" />
+    <Content Include="azure\Newtonsoft.Json.dll" />
+    <Content Include="DLL\CommonProcesador.dll" />
+    <Content Include="DLL\Dnu.AutorizadorParabiliaAzure.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
