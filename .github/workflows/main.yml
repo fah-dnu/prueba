@@ -29,7 +29,7 @@ jobs:
 
     - name: Descargar instalador de .NET Framework 4.6.1
       run: |
-          Invoke-WebRequest -Uri "https://download.microsoft.com/download/7/8/3/783F3D2A-8F7D-4C6E-9F6C-8A6F7C1C1C1C/NDP461-KB3102436-x86-x64-AllOS-ENU.exe" -OutFile "NDP461-KB3102436-x86-x64-AllOS-ENU.exe"
+          Invoke-WebRequest -Uri "https://www.microsoft.com/es-es/download/details.aspx?id=49982&msockid=073508d84e836e900c381b204fe06fe3" -OutFile "NDP461-KB3102436-x86-x64-AllOS-ENU.exe"
 
     - name: Instalar .NET Framework 4.6.1
       run: |
