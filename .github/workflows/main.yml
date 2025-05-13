@@ -23,7 +23,7 @@ jobs:
     - name: Ubicar y listar directorio
       run: |
           pwd
-          ls -la
+          ls
     #- name: Restore dependencies
       #run: dotnet restore # Restaurar las dependencias del proyecto
     #- name: Build
