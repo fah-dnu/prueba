@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest # Utilizar un entorno windows para generar un ejecutable, ya que en linux no se produce un ejecutable al compilar 
+    runs-on: windows-2019 # Utilizar un entorno windows "antiguo" para poder compilar a .NET 4.6.1 como destino 
 
     steps:
     - uses: actions/checkout@v4 # Revisar el contenido del repositorio
@@ -24,14 +24,6 @@ jobs:
     #- name: Build
      # run: dotnet build D:\a\prueba\prueba\ElProcesador\Core\Procesador\Procesador.csproj --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente
 
-    - name: Descargar instalador de .NET Framework 4.6.1
-      run: |
-          Invoke-WebRequest -Uri "https://www.microsoft.com/es-es/download/details.aspx?id=49982&msockid=073508d84e836e900c381b204fe06fe3" -OutFile "NDP461-KB3102436-x86-x64-AllOS-ENU.exe"
-
-    - name: Instalar .NET Framework 4.6.1
-      run: |
-          Start-Process -FilePath ".\NDP461-KB3102436-x86-x64-AllOS-ENU.exe" -ArgumentList "/quiet", "/norestart" -Wait
-          
     - name: Ubicar y listar directorio
       run: |
           cd D:\a\prueba\prueba\ElProcesador\Core\Procesador
@@ -43,8 +35,8 @@ jobs:
     - name: Build app for release
       run: msbuild D:\a\prueba\prueba\ElProcesador\Core\Procesador\Procesador.csproj -t:rebuild -verbosity:diag -property:Configuration=Release
 
-    #- name: Subir Artefactos  
-     # uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
-      #with:
-       # name: Archivos Compilados
-        #path: D:\a\prueba\prueba\ElProcesador\Core\Procesador\bin\Release\net8.0\
+    - name: Subir Artefactos  
+      uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
+      with:
+        name: Archivos Compilados
+        path: D:\a\prueba\prueba\ElProcesador\Core\Procesador\bin\Release\net8.0\
