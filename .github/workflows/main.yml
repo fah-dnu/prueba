@@ -1,0 +1,30 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest # Utilizar un entorno windows para generar un ejecutable, ya que en linux no se produce un ejecutable al compilar 
+
+    steps:
+    - uses: actions/checkout@v4 # Revisar el contenido del repositorio
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4 # Instalar .NET para el uso ded comandos como dotnet build o restore
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore # Restaurar las dependencias del proyecto
+    - name: Build
+      run: dotnet build prueba/ElProcesador/Core/Procesador/Procesador.csproj --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente 
+    - uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
+      with:
+        name: Archivos Compilados
+        path: prueba/ElProcesador/Core/Procesador/bin/Release/net8.0/
