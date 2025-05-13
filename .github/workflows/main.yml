@@ -23,8 +23,8 @@ jobs:
     #- name: Restore dependencies
       #run: dotnet restore # Restaurar las dependencias del proyecto
     - name: Build
-      run: dotnet build prueba/ElProcesador/Core/Procesador/Procesador.csproj --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente 
+      run: dotnet build --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente 
     - uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
       with:
         name: Archivos Compilados
-        path: prueba/ElProcesador/Core/Procesador/bin/Release/net8.0/
+        path: ./bin/Release/net8.0/
