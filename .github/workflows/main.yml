@@ -16,18 +16,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4 # Revisar el contenido del repositorio
-    #- name: Setup .NET
-     # uses: actions/setup-dotnet@v4 # Instalar .NET para el uso ded comandos como dotnet build o restore
-      #with:
-       # dotnet-version: 4.6.1
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4 # Instalar .NET para el uso ded comandos como dotnet build o restore
+      with:
+        dotnet-version: 4.6.X
     - name: Ubicar y listar directorio
       run: |
           cd D:\a\prueba\prueba\ElProcesador\Core\Procesador
           ls
-          where msbuild
-    #- name: Build
-     # run: 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe D:/a/prueba/prueba/ElProcesador/Core/Procesador /p:Configuration=Release'
-    #- uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
-     # with:
-      #  name: Archivos Compilados
-       # path: D:\a\prueba\prueba\ElProcesador\Core\Procesador\bin\Release\net8.0\
+    - name: Build
+      run: dotnet build --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente
+    - name: Subir Artefactos  
+    - uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
+      with:
+        name: Archivos Compilados
+        path: D:\a\prueba\prueba\ElProcesador\Core\Procesador\bin\Release\net8.0\
