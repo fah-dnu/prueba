@@ -27,6 +27,14 @@ jobs:
     #- name: Build
      # run: dotnet build D:\a\prueba\prueba\ElProcesador\Core\Procesador\Procesador.csproj --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente
 
+    - name: Descargar instalador de .NET Framework 4.6.1
+      run: |
+          Invoke-WebRequest -Uri "https://download.microsoft.com/download/7/8/3/783F3D2A-8F7D-4C6E-9F6C-8A6F7C1C1C1C/NDP461-KB3102436-x86-x64-AllOS-ENU.exe" -OutFile "NDP461-KB3102436-x86-x64-AllOS-ENU.exe"
+
+    - name: Instalar .NET Framework 4.6.1
+      run: |
+          Start-Process -FilePath ".\NDP461-KB3102436-x86-x64-AllOS-ENU.exe" -ArgumentList "/quiet", "/norestart" -Wait
+
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
 
