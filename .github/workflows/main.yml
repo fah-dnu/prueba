@@ -22,7 +22,7 @@ jobs:
         dotnet-version: 8.0.x
     - name: Ubicar y listar directorio
       run: |
-          pwd
+          cd D:\a\prueba\prueba\ElProcesador\Core\Procesador
           ls
     #- name: Restore dependencies
       #run: dotnet restore # Restaurar las dependencias del proyecto
