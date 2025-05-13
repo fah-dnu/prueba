@@ -24,10 +24,40 @@ jobs:
       run: |
           cd D:\a\prueba\prueba\ElProcesador\Core\Procesador
           ls
-    - name: Build
+    #- name: Build
+     # run: |
+      #  "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" D:\a\prueba\prueba\ElProcesador\Core\Procesador\Procesador.csproj /p:Configuration=Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente 
+    #- uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
+     # with:
+      #  name: Archivos Compilados
+       # path: D:\a\prueba\prueba\ElProcesador\Core\Procesador\bin\Release\net8.0\
+    - name: Buscar MSBuild
+      id: msbuild
       run: |
-        "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" D:\a\prueba\prueba\ElProcesador\Core\Procesador\Procesador.csproj /p:Configuration=Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente 
-    - uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
+        $paths = @(
+          "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe",
+          "C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe",
+          "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
+        )
+
+        foreach ($path in $paths) {
+          if (Test-Path $path) {
+            Write-Output "MSBuild encontrado en: $path"
+            echo "MSBUILD_PATH=$path" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+            exit 0
+          }
+        }
+
+        Write-Error "MSBuild no encontrado en ninguna ruta conocida."
+        exit 1
+
+    - name: Build con MSBuild usando ruta encontrada
+      run: |
+        & "${{ env.MSBUILD_PATH }}" prueba/ElProcesador/Core/Procesador/Procesador.csproj /p:Configuration=Release /t:Rebuild
+
+    - name: Publicar binarios como artifact
+      uses: actions/upload-artifact@v3
       with:
-        name: Archivos Compilados
-        path: D:\a\prueba\prueba\ElProcesador\Core\Procesador\bin\Release\net8.0\
+        name: Procesador-Binarios
+        path: prueba/ElProcesador/Core/Procesador/bin/Release
+
