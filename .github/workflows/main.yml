@@ -20,10 +20,7 @@ jobs:
      # uses: actions/setup-dotnet@v4 # Instalar .NET para el uso ded comandos como dotnet build o restore
       #with:
         #dotnet-version: 4.6.X
-    - name: Ubicar y listar directorio
-      run: |
-          cd D:\a\prueba\prueba\ElProcesador\Core\Procesador
-          ls
+    
     #- name: Build
      # run: dotnet build D:\a\prueba\prueba\ElProcesador\Core\Procesador\Procesador.csproj --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente
 
@@ -34,7 +31,12 @@ jobs:
     - name: Instalar .NET Framework 4.6.1
       run: |
           Start-Process -FilePath ".\NDP461-KB3102436-x86-x64-AllOS-ENU.exe" -ArgumentList "/quiet", "/norestart" -Wait
-
+          
+    - name: Ubicar y listar directorio
+      run: |
+          cd D:\a\prueba\prueba\ElProcesador\Core\Procesador
+          ls
+    
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v2
 
