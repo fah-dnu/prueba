@@ -20,8 +20,8 @@ jobs:
       uses: actions/setup-dotnet@v4 # Instalar .NET para el uso ded comandos como dotnet build o restore
       with:
         dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore # Restaurar las dependencias del proyecto
+    #- name: Restore dependencies
+      #run: dotnet restore # Restaurar las dependencias del proyecto
     - name: Build
       run: dotnet build prueba/ElProcesador/Core/Procesador/Procesador.csproj --no-restore --configuration Release # La bandera --no-restore es porque se especifica en la línea superior que se restauren las dependencias y el comando build las restaura implícitamente 
     - uses: actions/upload-artifact@v4  # Subir los archivos del directorio a un artefacto
